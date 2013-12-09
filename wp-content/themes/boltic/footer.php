@@ -1,3 +1,4 @@
 <?php wp_footer(); ?>
+
 </body>
-</html>
+</html> <!-- end page. what a ride! -->

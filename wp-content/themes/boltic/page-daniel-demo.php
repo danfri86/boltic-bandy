@@ -4,52 +4,10 @@ Template Name: Daniel demo
 */
 ?>
 
-<!doctype html>
-<head>
-	<meta charset="utf-8">
-	
-	<title><?php wp_title(''); ?></title>
-			
-	<?php wp_head(); ?>
-
-	<style type="text/css">
-		body{
-			background: #eee;
-		}
-
-		div.kod{
-			margin: 0 auto;
-			max-width: 800px;
-			padding: 20px 0;
-			border-bottom: 1px solid #ddd;
-		}
-
-		div img{
-			display: block;
-		}
-	</style>		
-</head>
-
-<body <?php body_class(); ?>>
-
+<?php get_header(); ?>
 
 	<div class="kod">
-		<p>Här är huvudmenyn</p>
-		<?php
-		$args = array(
-				'menu'		=>	'huvudmeny',
-				'container'	=>	'nav', // Ingen div runt menyn
-				'container_class' => '',
-				'container_id'    => '',
-				'menu_class'=>	'', // Lämnar class tomt
-				'menu_id'	=>	'', // Lämnar id tomt
-				'items_wrap'=>	'<ul>%3$s</ul>', // Tar bort ul id och class helt och hållet
-			);
-		wp_nav_menu( $args );
-		?>
-	</div>
-
-	<div class="kod">
+		<p>Här är loopen för den page.php</p>
 		<?php if (have_posts()) :
 			// Om det finns poster så kan vi göra något här
 		?>
@@ -105,6 +63,8 @@ Template Name: Daniel demo
 		?>
 					
 			<h1><?php the_title(); ?></h1>
+
+			<?php the_date(); ?>
 					
 			<?php the_content(); ?>
 			
@@ -353,13 +313,5 @@ Template Name: Daniel demo
 		<?php endif; //Slut ?>
 		<?php wp_reset_query(); // Nollställ loopen ?>
 	</div>
-
-
-
-
-
-
-<?php wp_footer(); ?>
-
-</body>
-</html> <!-- end page. what a ride! -->
+	
+<?php get_footer(); ?>
