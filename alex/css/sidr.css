@@ -1,0 +1,33 @@
+.sidr {
+    display: none;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    height: 100%;
+   	padding: 0 20px;
+    z-index: 999999;
+    width: 300px;
+    overflow-x: none;
+    overflow-y: auto;
+    font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+    font-size: 15px;
+    background: #f8f8f8;
+    color: #333;
+    border-left: 3px solid rgba(0, 0, 0, 0.1);
+}
+.sidr .sidr-inner {
+    padding: 0 0 15px;
+}
+.sidr .sidr-inner>p {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.sidr.right {
+    left: auto;
+    right: -300px;
+}
+.sidr.left {
+    left: -300px;
+    right: auto;
+}
+
