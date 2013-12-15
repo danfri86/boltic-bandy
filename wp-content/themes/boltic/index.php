@@ -13,27 +13,17 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 	<div class="site--intro" style="background:url(<?php echo $image[0] ?>);">
 		<div class="text">
 			<div class="container">
-				<a href="">
+				<a href="<?php the_permalink(); ?>">
 					<span>
 				    	<h1><b>SENASTE: </b><?php the_title(); ?></h1>
 				    	<?php the_excerpt(); ?>
 				 	</span>
 					
-					<span class="btn">Läs mer <i class="fa fa-chevron-right"></i></span>
+					<a class="btn">Läs mer <i class="fa fa-chevron-right"></i></a>
 				</a>
 			</div>
 		</div>
 	</div>
-			
-	<h1><?php the_title(); ?></h1>
-
-	<?php the_date(); ?>
-			
-	<?php the_content(); ?>
-	
-	<p>Featured bild: </p>
-	<?php // Ändra "thumbnail" till den storlek som önskas
-	the_post_thumbnail( 'thumbnail', array('class' => '')); ?>
 
 <?php endwhile; else:
 	// Om det inte finns några poster kan vi göra något här

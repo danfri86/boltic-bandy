@@ -97,19 +97,6 @@ add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
 
 
 
-// Sätt längden för excerpts till annan än default
- /*
-function new_excerpt_length($length) { 
-  return 100;
-}
-
-add_filter('excerpt_length', 'new_excerpt_length');
-*/
-
-
-
-
-
 
 // Support för meny
 add_theme_support( 'menus' );
@@ -121,7 +108,7 @@ register_nav_menu( 'huvudmeny', 'Huvudmenyn' );
 add_theme_support( 'post-thumbnails' );
 
 // Lägg till bildstorlek om inte Wordpress räcker till med sina tre vanliga.
-add_image_size( 'bannerimg', 1200, 580, true );
+add_image_size( 'bannerimg', 1200, 450, true );
 // true=exakt crop, false=bredden som angivet, auto höjd
 
 
@@ -134,26 +121,6 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
-
-
-
-
-
-
-// OPRÖVAD AV DANIEL. FUNGERAR?
-// Lägger till storlekar endast för vald posttyp
-// Byt namn på värdet inom type(posttyp) och value(thumbnail-namn)
-/*
-add_filter( 'intermediate_image_sizes', function($sizes){
-    $type = get_post_type($_REQUEST['post_id']);
-    foreach($sizes as $key => $value){
-        if($type=='post_type'  &&  $value != 'img_size_name'){
-            unset($sizes[$key]);
-        }
-    }
-    return $sizes;
-});
-*/
 
 
 
