@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){e("#btn-mobile-open").click(function(){alert("hej")});e("#showComments").click(function(){e("#comments").slideToggle()});e("#menuTablet").click(function(){e.sidr("close","sidr")})});

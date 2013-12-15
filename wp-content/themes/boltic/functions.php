@@ -7,6 +7,62 @@ require_once('custom-post-type/index.php');
 
 
 
+
+/*********************
+LADDA JQUERY
+*********************/
+add_action( 'wp_enqueue_script', 'load_jquery' );
+function load_jquery() {
+    wp_enqueue_script( 'jquery' );
+}
+
+
+
+
+
+
+
+/*********************
+CSS FIL
+*********************/
+function mitt_egna_stylesheet() { ?>
+    <link rel="stylesheet" id="custom_wp_admin_css"  href="<?php echo get_template_directory_uri() . '/css/styles.css'; ?>" type="text/css" media="all" />
+<?php } ?>
+<?php
+add_action( 'wp_enqueue_scripts', 'mitt_egna_stylesheet' );
+
+
+
+
+
+
+/*********************
+SCRIPTS
+*********************/
+function boltic_scripts() {
+  wp_register_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', array('jquery'), '1.0', true );
+  wp_enqueue_script( 'modernizr' );
+  
+  wp_register_script( 'custom_functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '1.0', true );
+  wp_enqueue_script( 'custom_functions' );
+
+   wp_register_script( 'classie', get_template_directory_uri() . '/js/classie.js', array('jquery'), '1.0', true );
+  wp_enqueue_script( 'classie' );
+
+   wp_register_script( 'cbpAnimatedHeader', get_template_directory_uri() . '/js/cbpAnimatedHeader.js', array('jquery'), '1.0', true );
+  wp_enqueue_script( 'cbpAnimatedHeader' );
+
+   wp_register_script( 'sidr', get_template_directory_uri() . '/js/jquery.sidr.js', array('jquery'), '1.0', true );
+  wp_enqueue_script( 'sidr' );
+}
+add_action( 'wp_enqueue_scripts', 'boltic_scripts' );
+
+
+
+
+
+
+
 // Ta bort onödig info från wp_head()
 function remove_header_info() {
     remove_action('wp_head', 'rsd_link');
@@ -65,7 +121,22 @@ register_nav_menu( 'huvudmeny', 'Huvudmenyn' );
 add_theme_support( 'post-thumbnails' );
 
 // Lägg till bildstorlek om inte Wordpress räcker till med sina tre vanliga.
-//add_image_size( 'thumbnail-namn', breddpx, höjdpx, true ); // true=exakt crop, false=bredden som angivet, auto höjd
+add_image_size( 'bannerimg', 1200, 580, true );
+// true=exakt crop, false=bredden som angivet, auto höjd
+
+
+
+
+
+// Ändra längd på the_excerpt()
+function custom_excerpt_length( $length ) {
+  return 8;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+
+
 
 
 
