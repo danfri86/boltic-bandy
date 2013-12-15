@@ -52,7 +52,7 @@ p{font-size:16px;font-size:1em;line-height:1.6em;display:block;margin-bottom:18p
 .container[role=main] .main-content .puff{width:100%;margin:0 auto;padding:25px 30px 20px 30px;height:280px;background:white;border-radius:4px;border:1px solid rgba(0, 0, 0, 0.12);}.container[role=main] .main-content .puff h2{margin:6px 0 2px 0;}
 .container[role=main] .main-content .nyheter{height:300px !important;position:relative;}.container[role=main] .main-content .nyheter hr{height:0px;border:none;border-bottom:1px solid rgba(0, 0, 0, 0.1);}
 .container[role=main] .main-content .nyheter .btn{border:none;position:absolute;right:20px;bottom:10px;font-size:smaller;}
-.container[role=main] .main-content .nyhet--container{width:100%;position:relative;height:100px;margin-bottom:10px;}.container[role=main] .main-content .nyhet--container .nyhet--bild{width:20%;margin-top:5px;height:80%;background-size:cover !important;background-position:center center !important;}
+.container[role=main] .main-content .nyhet--container{width:100%;position:relative;height:100px;margin-bottom:10px;}.container[role=main] .main-content .nyhet--container .nyhet--bild{margin-top:5px;}
 .container[role=main] .main-content .nyhet--container .box{padding:1px 5px;}
 .container[role=main] .main-content .nyhet--container .nyhet--innehall{width:70%;padding-left:30px;}
 .container[role=main] .main-content .boltic h2{margin-bottom:8px;}
