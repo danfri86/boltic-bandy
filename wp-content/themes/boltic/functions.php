@@ -7,6 +7,53 @@ require_once('custom-post-type/index.php');
 
 
 
+// Ta bort onödig info från wp_head()
+function remove_header_info() {
+    remove_action('wp_head', 'rsd_link');
+    remove_action('wp_head', 'wlwmanifest_link');
+    remove_action('wp_head', 'wp_generator');
+    remove_action('wp_head', 'start_post_rel_link');
+    remove_action('wp_head', 'index_rel_link');
+    remove_action('wp_head', 'adjacent_posts_rel_link');         // for WordPress <  3.0
+    remove_action('wp_head', 'adjacent_posts_rel_link_wp_head'); // for WordPress >= 3.0
+}
+add_action('init', 'remove_header_info');
+
+
+
+
+
+
+
+
+
+// Ta bort Wordpress admin notifikation om uppdatering för alla användare utom admins
+global $user_login;
+get_currentuserinfo();
+
+// Om en användare har tillräckligt höga rättigheter för att uppdatera plugin (dvs. admins)
+if (!current_user_can('update_plugins')) {
+add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
+add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
+ }
+
+
+
+
+
+// Sätt längden för excerpts till annan än default
+ /*
+function new_excerpt_length($length) { 
+  return 100;
+}
+
+add_filter('excerpt_length', 'new_excerpt_length');
+*/
+
+
+
+
+
 
 // Support för meny
 add_theme_support( 'menus' );
@@ -19,6 +66,109 @@ add_theme_support( 'post-thumbnails' );
 
 // Lägg till bildstorlek om inte Wordpress räcker till med sina tre vanliga.
 //add_image_size( 'thumbnail-namn', breddpx, höjdpx, true ); // true=exakt crop, false=bredden som angivet, auto höjd
+
+
+
+// OPRÖVAD AV DANIEL. FUNGERAR?
+// Lägger till storlekar endast för vald posttyp
+// Byt namn på värdet inom type(posttyp) och value(thumbnail-namn)
+/*
+add_filter( 'intermediate_image_sizes', function($sizes){
+    $type = get_post_type($_REQUEST['post_id']);
+    foreach($sizes as $key => $value){
+        if($type=='post_type'  &&  $value != 'img_size_name'){
+            unset($sizes[$key]);
+        }
+    }
+    return $sizes;
+});
+*/
+
+
+
+
+
+
+// Registrera sidebar
+register_sidebar(array(
+  'id' => 'sidebar-main',
+  'name' => 'Sidebar main',
+  'description' => 'Standard sidebar som visas på framsida, enstaka sidor m.m.',
+  'before_widget' => '<div id="%1$s" class="widget %2$s">',
+  'after_widget' => '</div>',
+  'before_title' => '<h4 class="widgettitle">',
+  'after_title' => '</h4>',
+));
+
+
+
+
+
+
+// Redirect till startsidan när man loggat in. (Istället för admin. Det finns ändå adminBar)
+add_filter( 'login_redirect', create_function(
+  '$url,$query,$user', 'return home_url();'
+), 10, 3 );
+
+
+
+
+
+
+// Ta bort widgets från admin dashboard (adminpanel)
+function remove_dashboard_widgets() {
+  global $wp_meta_boxes;
+  //unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_comments']);
+  unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_plugins']);
+  unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_quick_press']);
+  unset($wp_meta_boxes['dashboard']['normal']['core']['dashboard_recent_drafts']);
+  unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_primary']);
+  unset($wp_meta_boxes['dashboard']['side']['core']['dashboard_secondary']);
+
+  // Ta bort gravity forms med denna
+  remove_meta_box('rg_forms_dashboard', 'dashboard', 'normal;'); 
+}
+add_action('wp_dashboard_setup', 'remove_dashboard_widgets' );
+
+
+
+
+
+
+
+// wp_dashboard_setup is the action hook
+add_action('wp_dashboard_setup', 'posttyper_info');
+
+// add dashboard widget
+function posttyper_info() {
+    wp_add_dashboard_widget('custom_posttyper_info', 'Inläggsinfo','custom_posttyper_medlemmar');
+}
+
+function custom_posttyper_medlemmar(){
+
+    $args = array(
+        'public' => true ,
+        '_builtin' => false );
+    $output = 'object';
+    $operator = 'and';
+    echo '<table>';
+    //loop over all custom post types
+    $post_types = get_post_types( $args , $output , $operator );
+    foreach( $post_types as $post_type ) {
+        $num_posts = wp_count_posts( $post_type->name );
+        $num = number_format_i18n( $num_posts->publish );
+        $text = _n( $post_type->labels->singular_name, $post_type->labels->name , intval( $num_posts->publish ) );
+        if ( current_user_can( 'edit_posts' ) ) {
+            $num = "<a href='edit.php?post_type=$post_type->name'>$num</a>";
+            $text = "<a href='edit.php?post_type=$post_type->name'>$text</a>";
+        }
+        echo '<tr><td class="first b b-' . $post_type->name . '">' . $num . '</td>';
+        echo '<td class="t ' . $post_type->name . '">' . $text . '</td></tr>';
+    }
+    echo '</table>';
+}
+
+
 
 
 
@@ -117,7 +267,6 @@ if (is_admin()) { // Om man är i backend
 
 
 
-// OPRÖVAD AV DANIEL: FUNGERAR?
 /* Skapa en pagination-funktion som visas såhär:
 [1] 2 3 ... 5 »
 « 1 [2] 3 4 5 »
@@ -143,10 +292,26 @@ function pagination($prev = '«', $next = '»') {
         'type' => 'plain'
 );
     if( $wp_rewrite->using_permalinks() )
-        $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'sida/%#%/', 'paged' );
+        $pagination['base'] = user_trailingslashit( trailingslashit( remove_query_arg( 's', get_pagenum_link( 1 ) ) ) . 'page/%#%/', 'paged' );
 
     if( !empty($wp_query->query_vars['s']) )
         $pagination['add_args'] = array( 's' => get_query_var( 's' ) );
 
     echo paginate_links( $pagination );
 };
+
+
+
+
+
+
+
+// Ta bort extra CSS som 'Recent Comments' widget sätter dit
+function remove_recent_comments_style() {
+    global $wp_widget_factory;
+    remove_action('wp_head', array(
+        $wp_widget_factory->widgets['WP_Widget_Recent_Comments'],
+        'recent_comments_style'
+    ));
+}
+add_action('widgets_init', 'remove_recent_comments_style');

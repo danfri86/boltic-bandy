@@ -35,6 +35,9 @@ Template Name: Daniel demo
 			<?php if( get_post_meta($post->ID, 'sidor_layout', true) == 'fullBreddHeader' ) { ?>
 				<p>Innehåll för fullbredd med stor header bild</p>
 			<?php } ?>
+			
+			<p>Förmulär för att registrera nya medlemmar till backend</p>
+			<?php gravity_form('Ny medlem', false, false, false, '', false); ?>
 
 		<?php endwhile; else:
 			// Om det inte finns några poster kan vi göra något här
@@ -269,7 +272,7 @@ Template Name: Daniel demo
 			'posts_per_page' => 2,
 			'meta_key' => 'kalender_datum',
 			'orderby' => 'meta_value',
-			'order' => ASC,
+			'order' => 'ASC',
 			'meta_query' => array( // Visa bara inlägg som har datum satt till senare än, eller exakt, dagens datum
 		       array(
 		           'value' => $today,
@@ -312,6 +315,11 @@ Template Name: Daniel demo
 
 		<?php endif; //Slut ?>
 		<?php wp_reset_query(); // Nollställ loopen ?>
+	</div>
+
+	<div class="kod">
+		<p>Här är kod för att hämta sidebar.</p>
+		<?php get_sidebar('sidebarMain'); ?>
 	</div>
 	
 <?php get_footer(); ?>

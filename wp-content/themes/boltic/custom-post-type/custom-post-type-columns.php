@@ -135,4 +135,37 @@ function medlemmar_kolumn_content($column_name, $post_ID) {
     } 
 }
 
+/*********************
+Kalender
+*********************/
+add_filter('manage_kalender_posts_columns', 'kalender_kolumn_head', 10);  
+add_action('manage_kalender_posts_custom_column', 'kalender_kolumn_content', 10, 2);
+
+function kalender_kolumn_head($defaults) {
+	$defaults['datum'] = 'Datum';
+	$defaults['tid'] = 'Tid';
+
+	// Byt namn på title
+   	$defaults['title'] = _x('Aktivitet', 'column name');
+    
+    unset($defaults['categories']);
+    unset($defaults['author']);
+    unset($defaults['tags']);
+    unset($defaults['comments']);
+    unset($defaults['date']);
+    return $defaults;  
+}  
+  
+function kalender_kolumn_content($column_name, $post_ID) { 
+	$post_meta_data = get_post_custom($post->ID);
+	
+	if($column_name == 'datum') {  
+		echo $post_meta_data['kalender_datum'][0];
+    } 
+	
+	if($column_name == 'tid') {
+		echo $post_meta_data['kalender_tid'][0];
+	}
+}
+
 ?>

@@ -33,6 +33,9 @@ define('DB_CHARSET', 'utf8');
 /** Kollationeringstyp för databasen. Ändra inte om du är osäker. */
 define('DB_COLLATE', '');
 
+// Tillåt bara 5 revisioner av inlägg. Sparar plats i databasen
+if (!defined('WP_POST_REVISIONS')) define('WP_POST_REVISIONS', 5);
+
 /**#@-*/
 
 /**
