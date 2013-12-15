@@ -45,19 +45,6 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 
 
 
-
-<div class="site--intro" style="background:url(https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn1/62334_10151407953820804_1489625084_n.jpg);">
-	 <div class="text">
-	    <div class="container">
-	       <a href="">
-	          <span>
-	             <h4><b>SENASTE: </b>Förlust i hemmapremiären</h4>
-	             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-	          </span>
-	       <a href="" class="btn">Läs mer <i class="fa fa-chevron-right"></i></a></a>
-	    </div>
-	 </div>
-	</div>
 	<div class="container" role="main">
 	 <div class="main-content">
 	    <div class="box-12">
