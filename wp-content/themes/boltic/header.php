@@ -52,7 +52,7 @@
    					'container_id'    => '',
    					'menu_class'=>	'', // Lämnar class tomt
    					'menu_id'	=>	'', // Lämnar id tomt
-   					'items_wrap'=>	'<ul>%3$s</ul>', // Tar bort ul id och class helt och hållet
+   					'items_wrap'=>	'<ul>%3$s<li><a id="right-menu" href="#sidr"><i class="fa fa-align-justify"></i></a><a id="btn-mobile-open" class="btn-mobile"><i class="fa fa-align-justify"></i></a></li></ul>', // Tar bort ul id och class helt och hållet
    				);
    			wp_nav_menu( $args );
    			?>

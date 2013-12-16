@@ -104,14 +104,6 @@ add_theme_support( 'menus' );
 // Registrera huvudmenyn
 register_nav_menu( 'huvudmeny', 'Huvudmenyn' );
 
-// lägg till en ikon som sista element i menyn för mobil+tablet
-add_filter( 'wp_nav_menu_items', 'add_to_huvudmeny', 10, 2 );
-function add_to_huvudmeny ( $items, $args ) {
-        $items .= '<li><a id="right-menu" href="#sidr"><i class="fa fa-align-justify"></i></a><a id="btn-mobile-open" class="btn-mobile"><i class="fa fa-align-justify"></i></a></li>';
-    return $items;
-}
-
-
 
 
 

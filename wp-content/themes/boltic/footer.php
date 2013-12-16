@@ -9,7 +9,7 @@
 			'container_id'    => '',
 			'menu_class'=>	'', // Lämnar class tomt
 			'menu_id'	=>	'', // Lämnar id tomt
-			'items_wrap'=>	'<ul>%3$s</ul>', // Tar bort ul id och class helt och hållet
+			'items_wrap'=>	'<ul><a id="menuTablet" href="javascript:void(0)">x <span>stäng</span></a>%3$s</ul>', // Tar bort ul id och class helt och hållet
 		);
 	wp_nav_menu( $args );
 	?>
