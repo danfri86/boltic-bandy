@@ -73,7 +73,7 @@ p{font-size:16px;font-size:1em;line-height:1.6em;display:block;margin-bottom:18p
 .toggleSidebar #menuTablet{font-size:26px;font-weight:700;margin-bottom:20px;}.toggleSidebar #menuTablet span{font-size:14px;font-weight:300;}
 .toggleSidebar ul{list-style:none;padding:0;}.toggleSidebar ul li{position:relative;font-weight:600;display:block !important;display:block;border-bottom:1px solid rgba(0, 0, 0, 0.3);padding:10px 0;}.toggleSidebar ul li i{position:absolute;top:24px;right:0;font-weight:100;}
 .toggleSidebar ul li:first-child{border:none;font-weight:bolder;}
-.toggleSidebar ul li:last-child{display:none;}
+.toggleSidebar ul li:last-child{display:none !important;}
 .toggleSidebar ul li small{display:block;font-weight:400;letter-spacing:.2px;color:rgba(0, 0, 0, 0.4);font-size:80%;}
 .toggleSidebar i{margin-right:5px;}
 .toggleSidebar input[type="text"]{font-family:'Open Sans',sans-serif;border:1px solid rgba(0, 0, 0, 0.3);border-radius:4px;padding:22px 12px;display:block;font-weight:400;width:100%;margin:15px 0 -10px;}
