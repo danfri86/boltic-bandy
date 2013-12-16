@@ -69,7 +69,8 @@ p{font-size:16px;font-size:1em;line-height:1.6em;display:block;margin-bottom:18p
 .container[role=main] .ovrigt h2{padding-top:0px;}
 .container[role=main] .ovrigt a.btn{margin-top:15px;}
 .puff .calendar{border-bottom:1px solid rgba(0, 0, 0, 0.1);border-left:1px solid rgba(0, 0, 0, 0.1);border-right:1px solid rgba(0, 0, 0, 0.1);height:195px;}.puff .calendar p{display:block;padding:8px;background:#eee;text-align:center;}
-.toggleSidebar{background:white;font-family:'Open Sans',sans-serif;border-right:3px solid rgba(0, 0, 0, 0.1);}.toggleSidebar #menuTablet{font-size:26px;font-weight:700;margin-bottom:20px;}.toggleSidebar #menuTablet span{font-size:14px;font-weight:300;}
+.toggleSidebar{background:white;font-family:'Open Sans',sans-serif;border-right:3px solid rgba(0, 0, 0, 0.1);}.toggleSidebar>div{float:left;display:inline-block;padding:20px 5px;width:100%;}
+.toggleSidebar #menuTablet{font-size:26px;font-weight:700;margin-bottom:20px;}.toggleSidebar #menuTablet span{font-size:14px;font-weight:300;}
 .toggleSidebar ul{list-style:none;padding:0;}.toggleSidebar ul li{position:relative;font-weight:600;display:block;border-bottom:1px solid rgba(0, 0, 0, 0.3);padding:10px 0;}.toggleSidebar ul li i{position:absolute;top:24px;right:0;font-weight:100;}
 .toggleSidebar ul li:first-child{border:none;font-weight:bolder;}
 .toggleSidebar ul li small{display:block;font-weight:400;letter-spacing:.2px;color:rgba(0, 0, 0, 0.4);font-size:80%;}
@@ -86,7 +87,8 @@ p{font-size:16px;font-size:1em;line-height:1.6em;display:block;margin-bottom:18p
 .gastbok input[type="text"]{margin-bottom:0;}
 .alaget img{width:70%;margin:-10px auto 15px;}
 .alaget p{color:#4d4d4f;}.alaget p span{color:#006eb6;}
-.sidebar{width:30%;background:white;height:auto;margin-top:40px;border:1px solid rgba(0, 0, 0, 0.12);border-radius:4px;padding:16px 30px 0px 30px !important;}.sidebar i{margin-right:5px;}
+.sidebar{width:30%;background:white;height:auto;margin-top:40px;border:1px solid rgba(0, 0, 0, 0.12);border-radius:4px;padding:16px 30px 0px 30px !important;}.sidebar>div{float:left;display:inline-block;padding:20px 5px;width:100%;}
+.sidebar i{margin-right:5px;}
 .sidebar input[type="text"]{font-family:'Open Sans',sans-serif;border:1px solid rgba(0, 0, 0, 0.3);border-radius:4px;padding:22px 12px;display:block;font-weight:400;width:100%;margin:15px 0 -10px;}
 .social{border-bottom:1px solid rgba(0, 0, 0, 0.3);}.social .fb,.social .twit{display:block;text-align:center;position:relative;padding:12px 10px;color:white;}
 .social .fb{background:#3b5998;}.social .fb:hover{color:white;}

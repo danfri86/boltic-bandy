@@ -328,6 +328,52 @@ add_action('future_to_publish', 'autoset_featured');
 
 
 
+//<div class="breadcrumbs"><h3><span>Start > Nyheter > </span>Förlust i hemmapremiären</h3></div>
+
+
+// Breadcrumbs
+function the_breadcrumb() {
+        echo '<div class="breadcrumbs"><h3>';
+    if (!is_home()) {
+        echo '<a href="';
+        echo get_option('home');
+        echo '">';
+        echo 'Startsida';
+        echo '</a> > ';
+        if (is_category() || is_single()) {
+            $category = get_the_category(); 
+            echo $category[0]->cat_name;
+            echo ' > ';
+            if (is_single()) {
+                the_title();
+            }
+        } elseif (is_page()) {
+            if($post->post_parent){
+                $anc = get_post_ancestors( $post->ID );
+                 
+                foreach ( $anc as $ancestor ) {
+                    $output = '<a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a> >';
+                }
+                echo $output;
+                echo '<strong title="'.$title.'"> '.$title.'</strong>';
+            } else {
+                echo '<strong> ';
+                echo the_title();
+                echo '</strong>';
+            }
+        }
+    }
+    elseif (is_tag()) {single_tag_title();}
+    elseif (is_day()) {echo"Archive for "; the_time('F jS, Y');}
+    elseif (is_month()) {echo"Archive for "; the_time('F, Y');}
+    elseif (is_year()) {echo"Archive for "; the_time('Y');}
+    elseif (is_author()) {echo"Author Archive";}
+    elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "Blog Archives";}
+    elseif (is_search()) {echo"Search Results";}
+    echo '</h3></div>';
+}
+
+
 
 
 

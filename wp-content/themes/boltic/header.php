@@ -43,7 +43,7 @@
             </div>
          </div>
          <div class="container">
-            <h1><img src="<?php bloginfo('template_directory'); ?>/img/boltic-logo.gif" alt=""></h1>
+            <h1><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/boltic-logo.gif" alt=""></a></h1>
             <?php
    			$args = array(
    					'menu'		=>	'huvudmeny',
