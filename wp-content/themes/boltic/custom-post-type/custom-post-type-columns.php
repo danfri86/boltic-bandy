@@ -144,6 +144,7 @@ add_action('manage_kalender_posts_custom_column', 'kalender_kolumn_content', 10,
 function kalender_kolumn_head($defaults) {
 	$defaults['datum'] = 'Datum';
 	$defaults['tid'] = 'Tid';
+	$defaults['kategori'] = 'Kategori';
 
 	// Byt namn på title
    	$defaults['title'] = _x('Aktivitet', 'column name');
@@ -165,6 +166,14 @@ function kalender_kolumn_content($column_name, $post_ID) {
 	
 	if($column_name == 'tid') {
 		echo $post_meta_data['kalender_tid'][0];
+	}
+
+	if($column_name == 'kategori') {
+		$kalenderKat = get_the_terms( $post->ID, 'kalender_typ' );
+		
+		foreach ( $kalenderKat as $term ) {
+			echo $term->name;
+		}
 	}
 }
 

@@ -61,10 +61,14 @@ class randomPlayer_widget extends WP_Widget
    
       $post_meta_data = get_post_custom($post->ID); //Hämta meta-box fälten för att använda nedan
 
-      the_title();
-
       // Ändra "thumbnail" till den storlek som önskas
-      echo wp_get_attachment_image($post_meta_data['spelare_bild'][0], 'thumbnail');    
+      echo wp_get_attachment_image($post_meta_data['spelare_bild'][0], 'medium');
+
+      echo '<p>';
+      if( get_post_meta($post->ID, 'spelare_trojnummer', true) ) {
+        echo '<span>#'. $post_meta_data['spelare_trojnummer'][0] .' </span>';
+      };
+      echo the_title() .'</p>';
 
     endwhile; endif;
     wp_reset_query(); // Nollställ loopen

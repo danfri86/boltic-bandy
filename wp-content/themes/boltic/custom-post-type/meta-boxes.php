@@ -631,6 +631,20 @@ function boltic_register_meta_boxes( $meta_boxes )
 					'minuteText' => 'Minut',
 				),
 			),
+			// TEXT
+			array(
+				// Field name - Will be used as label
+				'name'  => __( 'Plats', 'rwmb' ),
+				// Field ID, i.e. the meta key
+				'id'    => "{$prefix}plats",
+				// Field description (optional)
+				'desc'  => __( 'Var äger aktivitetet rum?', 'rwmb' ),
+				'type'  => 'text',
+				// Default value (optional)
+				//'std'   => __( 'Default text value', 'rwmb' ),
+				// CLONES: Add to make the field cloneable (i.e. have multiple value)
+				'clone' => false,
+			),
 			// TEXTAREA
 			array(
 				'name' => __( 'Information', 'rwmb' ),
@@ -639,6 +653,78 @@ function boltic_register_meta_boxes( $meta_boxes )
 				'type' => 'textarea',
 				'cols' => 20,
 				'rows' => 5,
+			),
+		),
+	);
+
+	// Kalender match
+	$meta_boxes[] = array(
+		// Meta box id, UNIQUE per meta box. Optional since 4.1.5
+		'id' => 'kalender_match',
+
+		// Meta box title - Will appear at the drag and drop handle bar. Required.
+		'title' => __( 'Match', 'rwmb' ),
+
+		// Post types, accept custom post types as well - DEFAULT is array('post'). Optional.
+		'pages' => array( 'kalender' ),
+
+		// Where the meta box appear: normal (default), advanced, side. Optional.
+		'context' => 'normal',
+
+		// Order of meta box: high (default), low. Optional.
+		'priority' => 'high',
+
+		// Auto save: true, false (default). Optional.
+		'autosave' => true,
+
+		// List of meta fields
+		'fields' => array(
+			// SELECT BOX
+			array(
+				'name'     => __( 'Motståndare', 'rwmb' ),
+				'id'       => "{$prefix}motstandare",
+				'type'     => 'select',
+				// Array of 'value' => 'Label' pairs for select box
+				'options'  => array(
+					'Tillberga Bandy' => __( 'Tillberga Bandy', 'rwmb' ),
+					'Katrineholm VBS' => __( 'Katrineholm VBS', 'rwmb' ),
+					'IK Tellus' => __( 'IK Tellus', 'rwmb' ),
+					'Haparanda Tornio' => __( 'Haparanda Tornio', 'rwmb' ),
+					'UNIK' => __( 'UNIK', 'rwmb' ),
+					'IFK Rättvik Bandy' => __( 'IFK Rättvik Bandy', 'rwmb' ),
+					'Örebro SK' => __( 'Örebro SK', 'rwmb' ),
+					'Borlänge Bandy' => __( 'Borlänge Bandy', 'rwmb' ),
+					'Gustavsberg IF' => __( 'Gustavsberg IF', 'rwmb' ),
+					'Selånger Bandy' => __( 'Selånger Bandy', 'rwmb' ),
+					'Härnösand AIK' => __( 'Härnösand AIK', 'rwmb' ),
+				),
+				// Select multiple values, optional. Default is false.
+				'multiple'    => false,
+				//'std'         => 'value2',
+				'placeholder' => __( 'Välj lag', 'rwmb' ),
+				'desc' => 'Allsvenskan Norra 2013/2014',
+			),
+			// TEXT
+			array(
+				// Field name - Will be used as label
+				'name'  => __( 'Alternativt lag', 'rwmb' ),
+				// Field ID, i.e. the meta key
+				'id'    => "{$prefix}alternativtlag",
+				// Field description (optional)
+				'desc'  => __( 'Om laget inte finns i listan ovan, skriv det här', 'rwmb' ),
+				'type'  => 'text',
+				// Default value (optional)
+				//'std'   => __( 'Default text value', 'rwmb' ),
+				// CLONES: Add to make the field cloneable (i.e. have multiple value)
+				'clone' => false,
+			),
+			// IMAGE ADVANCED (WP 3.5+)
+			array(
+				'name'             => __( 'Bild', 'rwmb' ),
+				'id'               => "{$prefix}logo",
+				'type'             => 'image_advanced',
+				'max_file_uploads' => 1,
+				'desc' => 'Ladda upp alternativt lags logotyp. Behöver inte göras om laget finns i listan!',
 			),
 		),
 	);
@@ -744,6 +830,34 @@ function posttyper_load_scripts() {
 			});
 		</script>
 		
+	<?php }
+
+	// Om vi är i posttyp medlemmar
+	if( $post_type == 'kalender' ) {
+		?>
+		<script type="text/javascript">
+			jQuery(document).ready(function($){
+				
+				$("form#post").each(function(){
+					$(this).on("submit", function(theEvent){
+						$('#kalender_typchecklist input').click(function(){
+
+							var cnt = $('#kalender_typchecklist input:checked').length;
+
+							if( cnt == 0 ) {
+								alert('Du måste välja en kategori');
+								theEvent.preventDefault();
+								theEvent.stopPropagation();
+
+								alert('Du måste välja en kategori');
+							} else {
+
+							}
+						});
+					});
+				});
+			});
+		</script>
 	<?php }
 }
 add_action('admin_footer', 'posttyper_load_scripts');

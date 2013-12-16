@@ -45,16 +45,16 @@
          <div class="container">
             <h1><img src="<?php bloginfo('template_directory'); ?>/img/boltic-logo.gif" alt=""></h1>
             <?php
-			$args = array(
-					'menu'		=>	'huvudmeny',
-					'container'	=>	'nav', // Ingen div runt menyn
-					'container_class' => '',
-					'container_id'    => '',
-					'menu_class'=>	'', // Lämnar class tomt
-					'menu_id'	=>	'', // Lämnar id tomt
-					'items_wrap'=>	'<ul>%3$s</ul>', // Tar bort ul id och class helt och hållet
-				);
-			wp_nav_menu( $args );
-			?>
+   			$args = array(
+   					'menu'		=>	'huvudmeny',
+   					'container'	=>	'nav', // Ingen div runt menyn
+   					'container_class' => '',
+   					'container_id'    => '',
+   					'menu_class'=>	'', // Lämnar class tomt
+   					'menu_id'	=>	'', // Lämnar id tomt
+   					'items_wrap'=>	'<ul>%3$s</ul>', // Tar bort ul id och class helt och hållet
+   				);
+   			wp_nav_menu( $args );
+   			?>
          </div>
       </header>

@@ -213,6 +213,28 @@ function boltic_post_type() {
     		'query_var' => true,
     		'show_in_nav_menus' => false,
     	)
+    );
+
+	// lägg till egna kategorier
+    register_taxonomy( 'kalender_typ', 
+    	array('kalender'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+    	array('hierarchical' => true,     /* if this is true it acts like categories */             
+    		'labels' => array(
+    			'name' => __( 'Kategori' ), /* name of the custom taxonomy */
+    			'singular_name' => __( 'Kategori' ), /* single taxonomy name */
+    			'search_items' =>  __( 'Sök kategori' ), /* search title for taxomony */
+    			'all_items' => __( 'Alla kategorier' ),  /* all title for taxonomies */
+    			'parent_item' => __( 'Föregående kategori' ), /* parent title for taxonomy */
+    			'parent_item_colon' => __( 'Föregående kategori:' ), /* parent taxonomy title */
+    			'edit_item' => __( 'Redigera kategori' ), /* edit custom taxonomy title */
+    			'update_item' => __( 'Uppdatera kategori' ), /* update title for taxonomy */
+    			'add_new_item' => __( 'Lägg till ny kategori' ), /* add new title for taxonomy */
+    			'new_item_name' => __( 'Ny kategori' ) /* name title for taxonomy */
+    		),
+    		'show_ui' => true,
+    		'query_var' => true,
+    		'show_in_nav_menus' => false,
+    	)
     ); 
 	
 	// Ta bort sponsortyper från "Lägg till ny"-sidan. Sponsortyp väljs i en egen metabox istället

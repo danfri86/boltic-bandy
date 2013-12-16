@@ -71,20 +71,168 @@ query_posts("post_type=post&posts_per_page=1"); ?>
     <?php endif; //Slut ?>
 	<?php wp_reset_query(); // Nollställ loopen ?>
 
-          
-    <div class="box-6">
-       <div class="puff nastamatch">
-          <h3>Nästa match</h3>
+	 <?php // Specificera mer om dom poster vi vill ha inom ()
+	// Gör så att den aktivitet med närmast datum från idag visas först
+	$today = date('Y-m-d');
+	$args = array(
+		'post_type' => 'kalender',
+		'posts_per_page' => 1,
+		'kalender_typ' => 'match',
+		'meta_key' => 'kalender_datum',
+		'orderby' => 'meta_value',
+		'order' => 'ASC',
+		'meta_query' => array( // Visa bara inlägg som har datum satt till senare än, eller exakt, dagens datum
+	       array(
+	           'value' => $today,
+	           'compare' => '>=',
+	           'type' => 'DATE'
+	       )
+	   )
+		// Gör något som visar inlägg som ligger efter dagens datum. Då tas dom tidigare workshops'en bort
+	);
+	query_posts($args);
+	?>
+
+	<?php if (have_posts()) : ?>
+		<div class="box-6">
+		<div class="puff nastamatch">
+        <h3>Nästa match</h3>
+	<?php while (have_posts()) : the_post();
+		// Här körs loopen för dom poster som finns
+	?>
+		
+		<?php $post_meta_data = get_post_custom($post->ID); ?>
+
           <div class="box-12 logos">
-             <span class="box-5 phone-6"><img src="http://www.relita.se/data/galleri/idrott/vsk-bandy.gif"></span>
-             <span class="box-2 vs phone-hidden"><small>vs.</small></span>
-             <span class="box-5 phone-6"><img src="http://4.bp.blogspot.com/-koEU1sIamAc/UneWRNhs_9I/AAAAAAAAi4w/vdvEWSk3Ls4/s1600/Hammarby+IF.gif"></span>
+             <span class="box-5 phone-6">
+             	<img src="<?php bloginfo('template_directory'); ?>/img/lag-boltic.gif" width="80" height="80">
+             </span>
+
+             <span class="box-2 vs phone-hidden">
+             	<small>vs.</small>
+             </span>
+             
+             <span class="box-5 phone-6">
+             	<?php // Om laget är valt i listan, visa motsvarande logo
+				if( get_post_meta($post->ID, 'kalender_motstandare', true) == 'Tillberga Bandy' ) {
+					echo '<img src="';
+					bloginfo("template_directory");
+					echo '/img/lag/TillbergaBandy.png" />';
+				} ?>
+
+				<?php // Om laget är valt i listan, visa motsvarande logo
+				if( get_post_meta($post->ID, 'kalender_motstandare', true) == 'Katrineholm VBS' ) {
+					echo '<img src="';
+					bloginfo("template_directory");
+					echo '/img/lag/KatrineholmsVBS.png" />';
+				} ?>
+
+				<?php // Om laget är valt i listan, visa motsvarande logo
+				if( get_post_meta($post->ID, 'kalender_motstandare', true) == 'IK Tellus' ) {
+					echo '<img src="';
+					bloginfo("template_directory");
+					echo '/img/lag/IKtellus.png" />';
+				} ?>
+
+				<?php // Om laget är valt i listan, visa motsvarande logo
+				if( get_post_meta($post->ID, 'kalender_motstandare', true) == 'Haparanda Tornio' ) {
+					echo '<img src="';
+					bloginfo("template_directory");
+					echo '/img/lag/HaparandaTornio.png" />';
+				} ?>
+
+				<?php // Om laget är valt i listan, visa motsvarande logo
+				if( get_post_meta($post->ID, 'kalender_motstandare', true) == 'UNIK' ) {
+					echo '<img src="';
+					bloginfo("template_directory");
+					echo '/img/lag/Unik.png" />';
+				} ?>
+
+				<?php // Om laget är valt i listan, visa motsvarande logo
+				if( get_post_meta($post->ID, 'kalender_motstandare', true) == 'IFK Rättvik Bandy' ) {
+					echo '<img src="';
+					bloginfo("template_directory");
+					echo '/img/lag/IFKrattvikbandy.png" />';
+				} ?>
+
+				<?php // Om laget är valt i listan, visa motsvarande logo
+				if( get_post_meta($post->ID, 'kalender_motstandare', true) == 'Örebro SK' ) {
+					echo '<img src="';
+					bloginfo("template_directory");
+					echo '/img/lag/OrebroSK.png" />';
+				} ?>
+
+				<?php // Om laget är valt i listan, visa motsvarande logo
+				if( get_post_meta($post->ID, 'kalender_motstandare', true) == 'Borlänge Bandy' ) {
+					echo '<img src="';
+					bloginfo("template_directory");
+					echo '/img/lag/BorlangeBandy.png" />';
+				} ?>
+
+				<?php // Om laget är valt i listan, visa motsvarande logo
+				if( get_post_meta($post->ID, 'kalender_motstandare', true) == 'Gustavsberg IF' ) {
+					echo '<img src="';
+					bloginfo("template_directory");
+					echo '/img/lag/GustavsbergsIFBK.png" />';
+				} ?>
+
+				<?php // Om laget är valt i listan, visa motsvarande logo
+				if( get_post_meta($post->ID, 'kalender_motstandare', true) == 'Selånger Bandy' ) {
+					echo '<img src="';
+					bloginfo("template_directory");
+					echo '/img/lag/SelangerBandy.png" />';
+				} ?>
+
+				<?php // Om laget är valt i listan, visa motsvarande logo
+				if( get_post_meta($post->ID, 'kalender_motstandare', true) == 'Härnösand AIK' ) {
+					echo '<img src="';
+					bloginfo("template_directory");
+					echo '/img/lag/Harnosand.png" />';
+				} ?>
+
+             	<?php // Om en lag-logo är uppladdad, visa den
+			echo wp_get_attachment_image($post_meta_data['kalender_logo'][0], 'lag-logo'); ?>
+             </span>
           </div>
-          <span class="lagen"><small><i class="fa fa-flag"></i> IF Boltic vs. Hammarby</span>
-          <span class="arena"><i class="fa fa-map-marker"></i> Friends Arena</span>
-          <span class="tid"><i class="fa fa-clock-o"></i> Söndagen 24/11 kl 15.00</span></small>
-       </div>
-    </div>
+
+		<span class="lagen"><small><i class="fa fa-flag"></i> IF Boltic vs.
+			<?php // Om laget är valt i listan, skriv ut det
+			if( get_post_meta($post->ID, 'kalender_motstandare', true) ) {
+				echo $post_meta_data['kalender_motstandare'][0];
+			} ?>
+
+			<?php // Om laget inte finns i listan och är självskrivet
+			if( get_post_meta($post->ID, 'kalender_alternativtlag', true) ) {
+				echo $post_meta_data['kalender_alternativtlag'][0];
+			} ?>
+		</span>
+
+		<?php // Om plats är valt, skriv ut det
+		if( get_post_meta($post->ID, 'kalender_plats', true) ) {
+				echo '<span class="arena"><i class="fa fa-map-marker"></i>';
+				echo ' '. $post_meta_data['kalender_plats'][0];
+				echo '</span>';
+		} ?>
+
+		<?php // Om datum och tid är valt, skriv ut det
+		if( get_post_meta($post->ID, 'kalender_datum', true) || get_post_meta($post->ID, 'kalender_tid', true) ) {
+				echo '<span class="tid"><i class="fa fa-clock-o"></i>';
+				echo ' '. $post_meta_data['kalender_datum'][0];
+
+				if( get_post_meta($post->ID, 'kalender_tid', true) )
+					echo ' Kl. '. $post_meta_data['kalender_tid'][0];
+				echo '</span></small>';
+		} ?>
+
+	<?php endwhile; ?>
+		</div>
+		</div>
+	<?php else:
+		// Om det inte finns några poster kan vi göra något här
+	?>
+
+	<?php endif; //Slut ?>
+	<?php wp_reset_query(); // Nollställ loopen ?>
 
     <?php // Specificera mer om dom poster vi vill ha inom ()
 	query_posts("post_type=puffar"); ?>
@@ -149,6 +297,7 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 	$args = array(
 		'post_type' => 'kalender',
 		'posts_per_page' => 1,
+		'kalender_typ' => 'ovrigt',
 		'meta_key' => 'kalender_datum',
 		'orderby' => 'meta_value',
 		'order' => 'ASC',
@@ -183,6 +332,11 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 			<?php if( get_post_meta($post->ID, 'kalender_tid', true) ) {
 				echo '<p>Tid: '. $post_meta_data['kalender_tid'][0] .'</p>';
 			} ?>
+
+			<?php // Om plats är valt, skriv ut det
+			if( get_post_meta($post->ID, 'kalender_plats', true) ) {
+				echo $post_meta_data['kalender_plats'][0];
+			} ?>
 					
 			<?php if( get_post_meta($post->ID, 'kalender_info', true) ) {
 				echo apply_filters('the_content', $post_meta_data['kalender_info'][0]);
@@ -213,6 +367,10 @@ query_posts("post_type=post&posts_per_page=1"); ?>
     </div>
     <!--/MAIN-->
  </div>
+
+ <?php get_sidebar('sidebarMain'); ?>
+
+<?php /*
  <div class="sidebar box">
     <div class="box-12 social">
        <a href="" class="fb"><i class="fa fa-facebook"></i> Följ på Facebook</a>
@@ -280,5 +438,6 @@ query_posts("post_type=post&posts_per_page=1"); ?>
     </div>
  </div>
 </div>
+*/ ?>
 
 <?php get_footer(); ?>
