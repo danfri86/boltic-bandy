@@ -297,18 +297,12 @@ function boltic_register_meta_boxes( $meta_boxes )
 				// Options of checkboxes, in format 'value' => 'Label'
 				'options' => array(
 					'Målvakt' => __( 'Målvakt', 'rwmb' ),
-					'Mittback' => __( 'Mittback', 'rwmb' ),
-					'Högerhalv' => __( 'Högerhalv', 'rwmb' ),
-					'Centerhalv' => __( 'Centerhalv', 'rwmb' ),
-					'Vänsterhalv' => __( 'Vänsterhalv', 'rwmb' ),
-					'Högerytter' => __( 'Högerytter', 'rwmb' ),
-					'Höger innermittfältare' => __( 'Höger innermittfältare', 'rwmb' ),
-					'Vänster innermittfältare' => __( 'Vänster innermittfältare', 'rwmb' ),
-					'Vänsterytter' => __( 'Vänsterytter', 'rwmb' ),
-					'Högerforward' => __( 'Högerforward', 'rwmb' ),
-					'Centerforward' => __( 'Centerforward', 'rwmb' ),
-					'Vänsterforward' => __( 'Vänsterforward', 'rwmb' ),
-					'Libro' => __( 'Libro', 'rwmb' ),
+					'Försvar' => __( 'Försvar', 'rwmb' ),
+					'Mittfält' => __( 'Mittfält', 'rwmb' ),
+					'Anfall' => __( 'Anfall', 'rwmb' ),
+					'Lagledare' => __( 'Lagledare', 'rwmb' ),
+					'Tränare' => __( 'Tränare', 'rwmb' ),
+					'Materialare' => __( 'Materialare', 'rwmb' ),
 				),
 			),
 			// TEXTAREA
@@ -549,7 +543,7 @@ function boltic_register_meta_boxes( $meta_boxes )
 				'id'               => "{$prefix}headerBild",
 				'type'             => 'image_advanced',
 				'max_file_uploads' => 1,
-				'desc' => 'Ladda upp den bild som ska visas högst upp',
+				'desc' => 'Ladda upp den bild som ska visas högst upp. Bilden skalas till 1200*450px så länge bilden är större än så.',
 			),
 			// WYSIWYG/RICH TEXT EDITOR
 			array(
