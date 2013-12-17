@@ -37,10 +37,12 @@ Template Name: Nyheter
 							</div>
 
 							<div class="box-9">
-								<h2><?php the_title(); ?></h2>
-								<small><?php the_time('j F, Y'); ?></small>
-									
-								<?php the_excerpt(); ?>
+								<a href="<?php the_permalink(); ?>">
+									<h2><?php the_title(); ?></h2>
+									<small><?php the_time('j F, Y'); ?></small>
+										
+									<?php the_excerpt(); ?>
+								</a>
 							</div>
 						</div>
 

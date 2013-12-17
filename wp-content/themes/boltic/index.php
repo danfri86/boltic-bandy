@@ -51,7 +51,11 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 		<div class="nyhet--container">
 			<a href="<?php the_permalink(); ?>">
 
-				<?php the_post_thumbnail( 'thumbnail', array('class' => 'nyhet--bild box')); ?>
+				<?php if ( has_post_thumbnail() ) { ?>
+					<?php the_post_thumbnail( 'thumbnail', array('class' => 'nyhet--bild box')); ?>
+				<?php } else { ?>
+					<img class="nyhet--bild box" src="<?php bloginfo('template_directory') ?>/img/thumbnail-default.jpg" width="148" height="80" />
+				<?php } ?>
 				
 				<div class="nyhet--innehall box">
 					<h2><?php the_title(); ?></h2>
