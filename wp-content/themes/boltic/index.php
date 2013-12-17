@@ -24,7 +24,6 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 				    	<?php the_excerpt(); ?>
 				 	</span>
 					
-					<a class="btn">Läs mer <i class="fa fa-chevron-right"></i></a>
 				</a>
 			</div>
 		</div>

@@ -23,13 +23,15 @@ Används också för alla posttypers enskilda poster om dom inte har en egen sin
 
 	<div class="nyhetsInfo">
 		<span class="author"><i class="fa fa-user"></i> <?php the_author(); ?></span>
-		<span class="author"><i class="fa fa-clock-o"></i> <?php the_date(); ?></span>
+		<span class="author"><i class="fa fa-clock-o"></i><?php the_time(); ?> <?php the_date(); ?> </span>
 		<span class="author"><i class="fa fa-folder-open"></i> <?php $category = get_the_category(); 
 echo $category[0]->cat_name; ?></span>
 	</div>
 
 	<?php the_content(); ?>
 
+	<a class="fbDela"><i class="fa fa-facebook"></i> Dela på Facebook</a>
+	<a class="twitterDela"><i class="fa fa-twitter"></i> Dela på Twitter</a>
 	<a class="showComments" id="showComments">Visa kommentarer <i class="fa fa-chevron-right"></i></a>	
 
 <?php endwhile; ?>
