@@ -414,7 +414,7 @@ Kan anropas t.ex. såhär:
 
 Granska sidkoden för att sätta style med css
 */
-function pagination($prev = '«', $next = '»') {
+function pagination($next = '«', $prev = '»') {
     global $wp_query, $wp_rewrite;
     $wp_query->query_vars['paged'] > 1 ? $current = $wp_query->query_vars['paged'] : $current = 1;
     $pagination = array(
