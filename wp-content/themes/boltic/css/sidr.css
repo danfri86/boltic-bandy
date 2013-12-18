@@ -31,3 +31,16 @@
     right: auto;
 }
 
+
+@media only screen and (max-width: 540px) {
+
+    .sidr {
+         width: 200px;
+
+         .sidr.right, .sidr.left {
+            left: auto;
+            right: -200px;
+        }
+    }
+
+}
