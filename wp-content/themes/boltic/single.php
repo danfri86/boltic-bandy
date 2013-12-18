@@ -30,8 +30,8 @@ echo $category[0]->cat_name; ?></span>
 
 	<?php the_content(); ?>
 
-	<a class="fbDela"><i class="fa fa-facebook"></i> Dela på Facebook</a>
-	<a class="twitterDela"><i class="fa fa-twitter"></i> Dela på Twitter</a>
+	<a class="fbDela"><i class="fa fa-facebook"></i> <span>Dela på Facebook<span></a>
+	<a class="twitterDela"><i class="fa fa-twitter"></i> <span>Dela på Twitter<span></a>
 	<a class="showComments" id="showComments">Visa kommentarer <i class="fa fa-chevron-right"></i></a>	
 
 <?php endwhile; ?>
