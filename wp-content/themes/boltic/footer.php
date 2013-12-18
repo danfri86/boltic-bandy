@@ -21,22 +21,22 @@
 
 <footer class="box" role="contentinfo">
 	<div class="container puff">
-		<div class="box-3">
+		<div class="box-4">
 			<i class="fa fa-phone"> </i>  <b>Telefon</b>	  0134-122122
 		</div>
 
-		<div class="box-3"><i class="fa fa-envelope"></i> <b>E-mail</b> 	info@kansliet.se
+		<div class="box-4"><i class="fa fa-envelope"></i> <b>E-mail</b> 	info@kansliet.se
 		</div>
 
-		<div class="box-3">
+		<div class="box-4">
 			<i class="fa fa-map-marker"></i> <b>Adress</b>  Tingvalla isstadion
 		</div>
 	</div>
 </footer>
 <script>
 jQuery(document).ready(function($) {
-$('#right-menu').sidr({
-});
+	$('#right-menu').sidr({
+	});
 });
 </script>
 </body>

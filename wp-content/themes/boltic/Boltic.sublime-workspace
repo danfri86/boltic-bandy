@@ -124,10 +124,10 @@
 			}
 		},
 		{
-			"file": "header.php",
+			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 3206,
+				"buffer_size": 12484,
 				"line_ending": "Unix"
 			}
 		},
@@ -135,23 +135,7 @@
 			"file": "footer.php",
 			"settings":
 			{
-				"buffer_size": 1173,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "single.php",
-			"settings":
-			{
-				"buffer_size": 1378,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "index.php",
-			"settings":
-			{
-				"buffer_size": 12338,
+				"buffer_size": 1022,
 				"line_ending": "Unix"
 			}
 		}
@@ -212,17 +196,22 @@
 	},
 	"file_history":
 	[
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/alex/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page-nyheter.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/meta-boxes.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page-daniel-demo.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/alex/nyheter/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/header.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/personligtranare/wp-content/themes/pt/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/alex/index.html",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/alex/single-page/index.html",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/comments.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/sidebar.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/index.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/footer.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page-daniel-demo.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/plugins/widget_randomPlayer.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/aldrigvila/wp-content/themes/aldrigvila/functions.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/meta-boxes.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/custom-post-type.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/musicsite/script/artistFunctions.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/scripts.js",
@@ -230,7 +219,6 @@
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/custom-post-type-columns.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/css/styles.css",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/js/functions.js",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/header.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/style.css",
 		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/functions.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/daniel/wp-content/themes/danielv15/functions.php",
@@ -327,6 +315,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"box-3",
+			"Anfall",
+			"Centerhalv",
+			"Högerhalv",
+			"Mittback",
+			"spelare",
 			"echo'';",
 			"</li>",
 			"<li>",
@@ -450,7 +444,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -465,8 +459,8 @@
 						"selection":
 						[
 							[
-								2663,
-								2663
+								2534,
+								2534
 							]
 						],
 						"settings":
@@ -568,25 +562,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1398.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "header.php",
+					"file": "index.php",
 					"settings":
 					{
-						"buffer_size": 3206,
+						"buffer_size": 12484,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3075,
-								3075
+								1811,
+								1811
 							]
 						],
 						"settings":
@@ -684,11 +678,10 @@
 							"sublimelinter_wrap_find": true,
 							"synced": false,
 							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"tab_size": 3,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 295.0,
+						"translation.y": 539.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -698,15 +691,15 @@
 					"file": "footer.php",
 					"settings":
 					{
-						"buffer_size": 1173,
+						"buffer_size": 1022,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								377,
-								377
+								99,
+								148
 							]
 						],
 						"settings":
@@ -811,244 +804,6 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "single.php",
-					"settings":
-					{
-						"buffer_size": 1378,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"incomplete_sync": null,
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"remote_loading": false,
-							"sublimelinter": "save-only",
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 145.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "index.php",
-					"settings":
-					{
-						"buffer_size": 12338,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								11346,
-								11346
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"incomplete_sync": null,
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"remote_loading": false,
-							"sublimelinter": "save-only",
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"synced": false,
-							"syntax": "Packages/HTML5/Syntaxes/HTML 5.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 5358.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
 				}
 			]
 		}
@@ -1099,6 +854,26 @@
 		"selected_items":
 		[
 			[
+				"foo",
+				"footer.php"
+			],
+			[
+				"nyhe",
+				"page-nyheter.php"
+			],
+			[
+				"meta",
+				"custom-post-type/meta-boxes.php"
+			],
+			[
+				"dani",
+				"page-daniel-demo.php"
+			],
+			[
+				"head",
+				"header.php"
+			],
+			[
 				"in",
 				"index.php"
 			],
@@ -1115,16 +890,8 @@
 				"alex/index.html"
 			],
 			[
-				"foo",
-				"footer.php"
-			],
-			[
 				"com",
 				"comments.php"
-			],
-			[
-				"dani",
-				"page-daniel-demo.php"
 			],
 			[
 				"singl",
@@ -1151,10 +918,6 @@
 				"custom-post-type/custom-post-type-columns.php"
 			],
 			[
-				"meta",
-				"custom-post-type/meta-boxes.php"
-			],
-			[
 				"cusom",
 				"custom-post-type/custom-post-type.php"
 			],
@@ -1165,10 +928,6 @@
 			[
 				"daniel",
 				"page-daniel-demo.php"
-			],
-			[
-				"head",
-				"header.php"
 			],
 			[
 				"function",
