@@ -1,13 +1,16 @@
 jQuery(document).ready(function($) {
 		// Här kommer vi att göra något
 		// med mobilmenyn. Gör inget förutom alert atm.
-		$("#btn-mobile-open").click(function() {
+		/*$("#btn-mobile-open").click(function() {
 			alert("hej");
-		});
+		});*/
 
 		// Slidetoggle för att visa kommentarer på var enskild nyhet.
 		$("#showComments").click(function() {
-			$("#comments").slideToggle();
+
+			var btn = $("#showComments");
+			$("#comments").slideToggle(500);
+
 		});
 
 		// Stänga off canvas från canvasen.

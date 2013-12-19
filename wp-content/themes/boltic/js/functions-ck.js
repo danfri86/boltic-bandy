@@ -1,1 +1,1 @@
-jQuery(document).ready(function(e){e("#btn-mobile-open").click(function(){alert("hej")});e("#showComments").click(function(){e("#comments").slideToggle()});e("#menuTablet").click(function(){e.sidr("close","sidr")})});
+jQuery(document).ready(function(e){e("#showComments").click(function(){var t=e("#showComments");e("#comments").slideToggle(500)});e("#menuTablet").click(function(){e.sidr("close","sidr")})});
