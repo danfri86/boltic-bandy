@@ -177,6 +177,41 @@ function boltic_post_type() {
 			'supports' => array( 'title')
 	 	) /* slut på inställningar för posttyp */
 	); /* slut för registrering av posttyp */
+
+	register_post_type( 'kontaktpersoner', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
+	 	// lägg till inställningar för denna posttyp
+		array('labels' => array(
+			'name' => __('Kontaktpersoner', 'kontaktpersoner'), /* Titel på gruppen av poster */
+			'singular_name' => __('Kontaktperson', 'kontaktperson'), /* Individuell typ */
+			'add_new' => __('Lägg till ny', 'kontaktperson'), /* Text för att skapa ny i menyn */
+			'add_new_item' => __('Lägg till ny kontaktperson'), /* Text för lägg till ny posttyp */
+			'edit' => __( 'Redigera' ), /* Redigera */
+			'edit_item' => __('Redigera kontaktperson'), /* Redigera posttyp */
+			'new_item' => __('Ny kontaktperson'), /* Ny posttyp */
+			'view_item' => __('Visa kontaktperson'), /* Visa posttyp */
+			'search_items' => __('Sök kontaktperson'), /* Sök posttyp */ 
+			'not_found' =>  __('Ingenting hittades i databasen.'), /* Visas om inga poster är gjorda */ 
+			'not_found_in_trash' => __('Ingenting hittades i Papperskorgen.'), /* Om inget hittas i papperskorgen */
+			'parent_item_colon' => ''
+			), /* Slut på labels */
+			'description' => __( 'kontaktpersoner för Boltic Göta' ), /* posttyp beskrivning */
+			'public' => true,
+			'publicly_queryable' => true,
+			'exclude_from_search' => false,
+			'show_ui' => true,
+			'query_var' => true,
+			'menu_position' => 6, /* Var i menyn ska posttypen visas */ 
+			'menu_icon' => get_stylesheet_directory_uri() . '/custom-post-type/img/post_type_kontaktpersoner.png', /* Ikon för posttypen i menyn */
+			// Denna är standard 'rewrite' => true,
+			'rewrite' => array(
+			    'slug' => 'kontaktperson',
+			 ),
+			'capability_type' => 'page',
+			'hierarchical' => false,
+			/* Nästa förklarar vilka metaboxar som ska visas */
+			'supports' => array( 'title')
+	 	) /* slut på inställningar för posttyp */
+	); /* slut för registrering av posttyp */
 	
 	/* this ads your post categories to your custom post type */
 	// register_taxonomy_for_object_type('category', 'custom_type');

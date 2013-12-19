@@ -723,6 +723,78 @@ function boltic_register_meta_boxes( $meta_boxes )
 		),
 	);
 
+	// Better has an underscore as last sign
+	$prefix = 'kontaktperson';
+
+	// Sponsorer
+	$meta_boxes[] = array(
+		// Meta box id, UNIQUE per meta box. Optional since 4.1.5
+		'id' => 'kontaktpersoner_information',
+
+		// Meta box title - Will appear at the drag and drop handle bar. Required.
+		'title' => __( 'Information', 'rwmb' ),
+
+		// Post types, accept custom post types as well - DEFAULT is array('post'). Optional.
+		'pages' => array( 'kontaktpersoner' ),
+
+		// Where the meta box appear: normal (default), advanced, side. Optional.
+		'context' => 'normal',
+
+		// Order of meta box: high (default), low. Optional.
+		'priority' => 'high',
+
+		// Auto save: true, false (default). Optional.
+		'autosave' => true,
+
+		// List of meta fields
+		'fields' => array(
+			// TEXT
+			array(
+				// Field name - Will be used as label
+				'name'  => __( 'Arbetsroll', 'rwmb' ),
+				// Field ID, i.e. the meta key
+				'id'    => "{$prefix}arbetsroll",
+				// Field description (optional)
+				//'desc'  => __( 'Text description', 'rwmb' ),
+				'type'  => 'text',
+				// Default value (optional)
+				//'std'   => __( 'Default text value', 'rwmb' ),
+				// CLONES: Add to make the field cloneable (i.e. have multiple value)
+				'clone' => false,
+			),
+			// TEXT
+			array(
+				// Field name - Will be used as label
+				'name'  => __( 'Telefon', 'rwmb' ),
+				// Field ID, i.e. the meta key
+				'id'    => "{$prefix}telefon",
+				// Field description (optional)
+				//'desc'  => __( 'Text description', 'rwmb' ),
+				'type'  => 'text',
+				// Default value (optional)
+				//'std'   => __( 'Default text value', 'rwmb' ),
+				// CLONES: Add to make the field cloneable (i.e. have multiple value)
+				'clone' => false,
+			),
+			// EMAIL
+			array(
+				'name'  => __( 'Epost', 'rwmb' ),
+				'id'    => "{$prefix}epost",
+				//'desc'  => __( 'Email description', 'rwmb' ),
+				'type'  => 'email',
+				//'std'   => 'namn@email.com',
+			),
+			// IMAGE ADVANCED (WP 3.5+)
+			array(
+				'name'             => __( 'Profilbild', 'rwmb' ),
+				'id'               => "{$prefix}profilbild",
+				'type'             => 'image_advanced',
+				'max_file_uploads' => 1,
+				'desc' => 'Ladda upp bild på personen',
+			),
+		),
+	);
+
 	//Avsluta metaboxar
 	return $meta_boxes;
 }
@@ -774,6 +846,16 @@ function posttyper_load_scripts() {
 		<script type="text/javascript">
 			jQuery(document).ready(function($){
 				$('#titlewrap label').text("Ange medlemmens namn här");
+			});
+		</script>
+	<?php }
+
+	// Om vi är i posttyp kontaktpersoner
+	if( $post_type == 'kontaktpersoner' ) {
+		?>
+		<script type="text/javascript">
+			jQuery(document).ready(function($){
+				$('#titlewrap label').text("Ange namn här");
 			});
 		</script>
 	<?php }
