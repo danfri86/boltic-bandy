@@ -325,6 +325,8 @@ add_action('future_to_publish', 'autoset_featured');
 
 // Breadcrumbs
 function the_breadcrumb() {
+    global $post;
+    
         echo '<div class="breadcrumbs"><h3>';
     if (!is_home()) {
         echo '<a href="';

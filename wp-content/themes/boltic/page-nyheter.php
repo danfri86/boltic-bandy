@@ -13,7 +13,6 @@ Template Name: Nyheter
 
 			<div class="box-12">
 				<div class="pufftest">
-					<!--<div class="breadcrumbs"><h3><span>Start > Nyheter > </span>Förlust i hemmapremiären</h3></div>-->
 
 					<?php the_breadcrumb(); ?>
 					

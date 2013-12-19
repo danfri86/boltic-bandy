@@ -1,9 +1,3 @@
-<?php
-/*
-Template Name: Nyheter
-*/
-?>
-
 <?php get_header(); ?>
 
 <?php if (have_posts()) :
@@ -53,10 +47,10 @@ Template Name: Nyheter
 					<?php the_breadcrumb(); ?>  
 
 					<h2><?php the_title(); ?></h2>
-								
-					<?php 
-					echo apply_filters('the_content', $post_meta_data['sidor_content'][0]);
-					?>
+					
+					<?php if( get_post_meta($post->ID, 'sidor_content', true) ) {
+						echo apply_filters('the_content', $post_meta_data['sidor_content'][0]);
+					} ?>
 
 				</div>
 			</div>	
