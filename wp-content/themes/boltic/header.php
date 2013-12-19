@@ -34,14 +34,6 @@
 <body <?php body_class(); ?>>
 
 	<header role="banner" class="top" id="top">
-         <div class="top--menu">
-            <div class="container">
-               <ul>
-                  <li><small><i class="fa fa-phone"> </i> 0134-122122</small></li>
-                  <li><small><i class="fa fa-envelope-o"></i> info@kansliet.se</small></li>
-               </ul>
-            </div>
-         </div>
          <div class="container">
             <h1><a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/img/boltic-logo.gif" alt=""></a></h1>
             <?php
