@@ -11,23 +11,23 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 	
 	<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'bannerimg' ); ?>
 
-	<?php if ( has_post_thumbnail() ) { ?>
-		<div class="site--intro" style="background:url(<?php echo $image[0] ?>); height='450px'";>
-	<?php } else { ?>
-		<div class="site--intro" style="background:url(<?php bloginfo('template_directory') ?>/img/banner-default.jpg); height='450px'">
-	<?php } ?>
-		<div class="text">
-			<div class="container">
-				<a href="<?php the_permalink(); ?>">
-					<span>
-				    	<h1><b>SENASTE: </b><?php the_title(); ?></h1>
-				    	<?php the_excerpt(); ?>
-				 	</span>
-					
-				</a>
+	<a href="<?php the_permalink(); ?>">
+		<?php if ( has_post_thumbnail() ) { ?>
+			<div class="site--intro" style="background:url(<?php echo $image[0] ?>); height='450px'";>
+		<?php } else { ?>
+			<div class="site--intro" style="background:url(<?php bloginfo('template_directory') ?>/img/banner-default.jpg); height='450px'">
+		<?php } ?>
+			<div class="text">
+				<div class="container">
+						<span>
+					    	<h1><b>SENASTE: </b><?php the_title(); ?></h1>
+					    	<?php the_excerpt(); ?>
+					 	</span>
+						
+				</div>
 			</div>
 		</div>
-	</div>
+	</a>
 
 <?php endwhile; else:
 	// Om det inte finns några poster kan vi göra något här
