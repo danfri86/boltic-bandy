@@ -9,10 +9,9 @@
 
 	<?php //Hämta meta-box fälten för att använda nedan
 	$post_meta_data = get_post_custom($post->ID); ?>
-				
-	<?php $image = wp_get_attachment_image_src($post_meta_data['sidor_headerBild'][0], 'bannerimg'); ?>
 
 	<?php if( get_post_meta($post->ID, 'sidor_layout', true) == 'enKolumnSidebarHeader' || get_post_meta($post->ID, 'sidor_layout', true) == 'fullBreddHeader' ) { ?>
+		<?php $image = wp_get_attachment_image_src($post_meta_data['sidor_headerBild'][0], 'bannerimg'); ?>
 		<div class="site--intro" style="background:url(<?php echo $image[0]; ?>); height='450px'";></div>
 	<?php } else { ?>
 		<div class="room box"></div>
@@ -53,12 +52,16 @@
 					} ?>
 
 					<?php //Om sidan är "Kontakt"
-					if( is_page('Kontakt') )
+					if( is_page('kontakt') )
 						include (TEMPLATEPATH . '/loop-kontaktpersoner.php'); ?>
 
 					<?php //Om sidan är "Kalender"
-					if( is_page('Kalender') )
+					if( is_page('kalender') )
 						include (TEMPLATEPATH . '/loop-kalender.php'); ?>
+
+					<?php //Om sidan är "Laget"
+					if( is_page('laget') )
+						include (TEMPLATEPATH . '/loop-spelare.php'); ?>
 
 				</div>
 			</div>	

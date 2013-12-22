@@ -724,7 +724,7 @@ function boltic_register_meta_boxes( $meta_boxes )
 	);
 
 	// Better has an underscore as last sign
-	$prefix = 'kontaktperson';
+	$prefix = 'kontaktperson_';
 
 	// Sponsorer
 	$meta_boxes[] = array(

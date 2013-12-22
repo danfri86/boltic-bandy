@@ -1,27 +1,37 @@
 <?php query_posts("post_type=kontaktpersoner&order=ASC&posts_per_page=99");
-	if (have_posts()) : while (have_posts()) : the_post(); ?>
+	if (have_posts()) :  ?>
+		<ul class="kontaktpersoner">
+	<?php while (have_posts()) : the_post(); ?>
 
-		<?php //Hämta meta-box fälten för att använda nedan
-		$post_meta_data = get_post_custom($post->ID); ?>
-					
-		<?php $image = wp_get_attachment_image_src($post_meta_data['kontaktperson_profilbild'][0], 'thumbnail'); ?>
+		<li>
 
-		<h2><?php the_title(); ?></h2>
+			<?php //Hämta meta-box fälten för att använda nedan
+			$post_meta_data = get_post_custom($post->ID); ?>
 
-		<?php // Om laget är valt i listan, skriv ut det
-		if( get_post_meta($post->ID, 'kontaktperson_arbetsroll', true) ) {
-			echo $post_meta_data['kontaktperson_arbetsroll'][0];
-		} ?>
+			<?php if( get_post_meta($post->ID, 'kontaktperson_profilbild', true) ) {					
+				echo wp_get_attachment_image($post_meta_data['kontaktperson_profilbild'][0], 'thumbnail');
+			} ?>
 
-		<?php // Om laget är valt i listan, skriv ut det
-		if( get_post_meta($post->ID, 'kontaktperson_telefon', true) ) {
-			echo $post_meta_data['kontaktperson_telefon'][0];
-		} ?>
+			<h2><?php the_title(); ?></h2>
 
-		<?php // Om laget är valt i listan, skriv ut det
-		if( get_post_meta($post->ID, 'kontaktperson_epost', true) ) {
-			echo $post_meta_data['kontaktperson_epost'][0];
-		} ?>
+			<?php // Om laget är valt i listan, skriv ut det
+			if( get_post_meta($post->ID, 'kontaktperson_arbetsroll', true) ) {
+				echo '<p>'. $post_meta_data['kontaktperson_arbetsroll'][0] .'</p>';
+			} ?>
 
-<?php endwhile; endif; ?>
+			<?php // Om laget är valt i listan, skriv ut det
+			if( get_post_meta($post->ID, 'kontaktperson_telefon', true) ) {
+				echo '<p>'. $post_meta_data['kontaktperson_telefon'][0] .'</p>';
+			} ?>
+
+			<?php // Om laget är valt i listan, skriv ut det
+			if( get_post_meta($post->ID, 'kontaktperson_epost', true) ) {
+				echo '<p>'. $post_meta_data['kontaktperson_epost'][0] .'</p>';
+			} ?>
+
+		</li>
+
+<?php endwhile; ?>
+</ul>
+<?php endif; ?>
 <?php wp_reset_query(); // Nollställ loopen ?>
