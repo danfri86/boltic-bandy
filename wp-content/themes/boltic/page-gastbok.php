@@ -1,3 +1,7 @@
+<?php /*
+Template name: Gästbok
+*/ ?>
+
 <?php get_header(); ?>
 
 <?php if (have_posts()) :
@@ -51,17 +55,18 @@
 					<?php if( get_post_meta($post->ID, 'sidor_content', true) ) {
 						echo apply_filters('the_content', $post_meta_data['sidor_content'][0]);
 					} ?>
-
-					<?php //Om sidan är "Kontakt"
-					if( is_page('Kontakt') )
-						include (TEMPLATEPATH . '/loop-kontaktpersoner.php'); ?>
-
-					<?php //Om sidan är "Kalender"
-					if( is_page('Kalender') )
-						include (TEMPLATEPATH . '/loop-kalender.php'); ?>
-
 				</div>
 			</div>	
+			
+			<?php /*
+			<div class="box-12" id="comments">
+				<div class="pufftest">
+					<?php comments_template(); ?>
+				</div>
+			</div>
+			*/ ?>
+
+			<?php comments_template(); ?>
 
 		<!--/MAIN-->
 		</div>

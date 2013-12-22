@@ -305,7 +305,6 @@ add_filter('admin_footer_text', 'edit_footer_admin');
 
 
 
-// OPRÖVAD AV DANIEL: FUNGERAR?
 // Sätt "featured image" automatiskt men om en bild är vald av författaren så används den istället.
 function autoset_featured() {
           global $post;
@@ -330,8 +329,6 @@ add_action('future_to_publish', 'autoset_featured');
 
 
 //<div class="breadcrumbs"><h3><span>Start > Nyheter > </span>Förlust i hemmapremiären</h3></div>
-
-
 // Breadcrumbs
 function the_breadcrumb() {
     global $post;
@@ -390,8 +387,8 @@ if (is_admin()) { // Om man är i backend
 		// Ta bort meta boxar från sidor
 		//remove_meta_box('pageparentdiv', 'page', 'normal');
 		remove_meta_box('postcustom', 'page', 'normal');
-		remove_meta_box('commentstatusdiv', 'page', 'normal');
-		remove_meta_box('commentsdiv', 'page', 'normal');
+		//remove_meta_box('commentstatusdiv', 'page', 'normal');
+		//remove_meta_box('commentsdiv', 'page', 'normal');
 		remove_meta_box('slugdiv', 'page', 'normal');
 		//remove_meta_box('authordiv', 'page', 'normal');
 	}
