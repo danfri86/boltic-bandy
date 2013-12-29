@@ -288,7 +288,7 @@ query_posts("post_type=post&posts_per_page=1"); ?>
              <div class="box-8">
                 <h2>Bli medlem</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <a href="#" class="btn">Bli medlem <i class="fa fa-chevron-right"></i></a>
+                <a href="<?php bloginfo('url'); ?>/bli-medlem" class="btn">Bli medlem <i class="fa fa-chevron-right"></i></a>
              </div>
           </div>
        </div>

@@ -2,7 +2,8 @@
 	"folders":
 	[
 		{
-			"path": "/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic"
+			"follow_symlinks": true,
+			"path": "."
 		}
 	]
 }
