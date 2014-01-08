@@ -63,13 +63,6 @@
 	},
 	"buffers":
 	[
-		{
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -107,6 +100,7 @@
 	},
 	"file_history":
 	[
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/index.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/fonts/fontello demo/css/fontello-ie7.css",
 		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/fonts/fontello demo/LICENSE.txt",
 		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/footer.php",
@@ -251,36 +245,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -330,6 +296,10 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"inde",
+				"index.php"
+			],
 			[
 				"functio",
 				"ptonline2-pt/functions.php"
@@ -413,21 +383,21 @@
 			[
 				"header",
 				"ptonline2-klient/header.php"
-			],
-			[
-				"inde",
-				"ptonline2-klient/index.php"
 			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"pt",
+				"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/PT-online.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
@@ -443,7 +413,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":
