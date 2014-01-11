@@ -63,6 +63,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "comments.php",
+			"settings":
+			{
+				"buffer_size": 3941,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -100,6 +108,10 @@
 	},
 	"file_history":
 	[
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page-gastbok.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/functions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/personligtranare/wp-content/themes/pt/functions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/footer.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/index.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/fonts/fontello demo/css/fontello-ie7.css",
 		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/fonts/fontello demo/LICENSE.txt",
@@ -180,6 +192,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"ptbyemma",
+			"dfComments",
+			"boltic_com",
+			"aky",
+			"kommentar",
+			"commen",
 			"super",
 			"h4",
 			"small",
@@ -245,14 +263,44 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "comments.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3941,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								963,
+								977
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 837.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -297,6 +345,18 @@
 		"selected_items":
 		[
 			[
+				"gas",
+				"page-gastbok.php"
+			],
+			[
+				"func",
+				"functions.php"
+			],
+			[
+				"comme",
+				"comments.php"
+			],
+			[
 				"inde",
 				"index.php"
 			],
@@ -329,16 +389,8 @@
 				"ptonline2-klient/functions.php"
 			],
 			[
-				"func",
-				"ptonline2-klient/functions.php"
-			],
-			[
 				"comment",
 				"ptonline2-klient/comments.php"
-			],
-			[
-				"comme",
-				"ptonline2-pt/comments.php"
 			],
 			[
 				"commen",
@@ -393,6 +445,10 @@
 		"selected_items":
 		[
 			[
+				"linda",
+				"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/Linda Norstedt.sublime-project"
+			],
+			[
 				"pt",
 				"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/PT-online.sublime-project"
 			]
@@ -413,7 +469,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":

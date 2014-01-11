@@ -21,18 +21,21 @@
 
 <footer class="box" role="contentinfo">
 	<div class="container puff">
+
+		<?php global $NHP_Options; ?>
+		
 		<div class="box-3">
-			<i class="fa fa-phone"> </i>  <b>Telefon</b>	  0134-122122
+			<i class="fa fa-phone"> </i>  <b>Telefon</b> <?php $NHP_Options->show('footer_telefon'); ?>
 		</div>
 
-		<div class="box-3"><i class="fa fa-envelope"></i> <b>E-mail</b> 	info@kansliet.se
+		<div class="box-3"><i class="fa fa-envelope"></i> <b>E-mail</b> <?php $NHP_Options->show('footer_epost'); ?>
 		</div>
 
 		<div class="box-3">
-			<i class="fa fa-map-marker"></i> <b>Adress</b>  Tingvalla isstadion
+			<i class="fa fa-map-marker"></i> <b>Adress</b> <?php $NHP_Options->show('footer_adress'); ?>
 		</div>
 
-		<a class="btn">Till kontakt-sidan <i class="fa fa-chevron-right"></i></a>
+		<a href="<?php bloginfo('url'); ?>/kontakt" class="btn">Till kontakt-sidan <i class="fa fa-chevron-right"></i></a>
 	</div>
 </footer>
 <script>

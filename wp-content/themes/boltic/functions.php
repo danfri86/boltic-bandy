@@ -1,5 +1,8 @@
 <?php
 
+// Stöd för temainställningar
+get_template_part('nhp', 'options');
+
 // Custom Post Types och metaboxar
 require_once('custom-post-type/index.php');
 
@@ -458,3 +461,69 @@ function remove_recent_comments_style() {
     ));
 }
 add_action('widgets_init', 'remove_recent_comments_style');
+
+
+
+
+
+
+
+/********************
+Layout för kommentarer
+********************/
+if ( ! function_exists( 'boltic_comment' ) ) :
+function boltic_comment( $comment, $args, $depth ) {
+  $GLOBALS['comment'] = $comment;
+  switch ( $comment->comment_type ) :
+    case 'pingback' :
+    case 'trackback' :
+    // Display trackbacks differently than normal comments.
+  ?>
+  <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+    <p><?php _e( 'Pingback:', 'boltic' ); ?> <?php comment_author_link(); ?>
+      <div class="meta">
+        <?php edit_comment_link( __( 'Redigera', 'boltic_comment' ), '', '' ); ?>
+      </div>  
+    </p>
+  <?php
+      break;
+    default :
+    // Proceed with normal comments.
+    global $post;
+  ?>
+  <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
+    <article id="comment-<?php comment_ID(); ?>">
+      <header>
+        <?php
+          echo get_avatar( $comment, 44 );
+
+          echo '<a class="author" href="';
+            comment_author_url();
+          echo '" target="_blank">';
+            comment_author();
+          echo '</a>';
+
+          echo '<span class="meta">';
+            echo comment_time(' - j F, Y');
+            echo '. Kl. ';
+            echo comment_time('H:i');
+          echo '</span>';
+        ?>
+      </header><!-- .comment-meta -->
+
+      <?php if ( '0' == $comment->comment_approved ) : ?>
+        <p class="comment-awaiting-moderation"><?php _e( 'Din kommentar väntar på att modereras.', 'boltic_comment' ); ?></p>
+      <?php endif; ?>
+
+      <?php comment_text(); ?>
+        
+      <div class="meta">
+        <?php edit_comment_link( __( 'Redigera', 'boltic_comment' ), '', ' – ' ); ?>
+        <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Svara', 'boltic_comment' ), 'after' => '', 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+      </div>      
+    </article><!-- #comment-## -->
+  <?php
+    break;
+  endswitch; // end comment_type check
+}
+endif;

@@ -24,20 +24,20 @@ if ( post_password_required() )
 
 		<h2 class="h4 comments-title">
 			<?php
-				printf( _n( '1 kommentar', '%1$s kommentarer', get_comments_number(), 'aky' ),
+				printf( _n( '1 kommentar', '%1$s kommentarer', get_comments_number(), 'boltic' ),
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
 		</h2>
 
 		<ol class="commentlist twelvecol clearfix">
-			<?php wp_list_comments( array( 'callback' => 'aky_comment', 'style' => 'ol' ) ); ?>
+			<?php wp_list_comments( array( 'callback' => 'boltic_comment', 'style' => 'ol' ) ); ?>
 		</ol><!-- .commentlist -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="navigation" role="navigation">
-			<h1 class="assistive-text section-heading"><?php _e( 'Comment navigation', 'aky' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'aky' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'aky' ) ); ?></div>
+			<h1 class="assistive-text section-heading"><?php _e( 'Comment navigation', 'boltic' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'boltic' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'boltic' ) ); ?></div>
 		</nav>
 		<?php endif; // check for comment navigation ?>
 		
@@ -92,5 +92,5 @@ if ( post_password_required() )
 		 * But we only want the note on posts and pages that had comments in the first place.
 		 */
 		if ( ! comments_open() && get_comments_number() ) : ?>
-		<p class="nocomments"><?php _e( 'Kommentarerna är stängda' , 'aky' ); ?></p>
+		<p class="nocomments"><?php _e( 'Kommentarerna är stängda' , 'boltic' ); ?></p>
 		<?php endif; ?>

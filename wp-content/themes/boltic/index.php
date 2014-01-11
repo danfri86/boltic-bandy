@@ -15,7 +15,7 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 		<?php if ( has_post_thumbnail() ) { ?>
 			<div class="site--intro" style="background:url(<?php echo $image[0] ?>); height='450px'";>
 		<?php } else { ?>
-			<div class="site--intro" style="background:url(<?php bloginfo('template_directory') ?>/img/banner-default.jpg); height='450px'">
+			<div class="site--intro" style="background:url(<?php global $NHP_Options; $NHP_Options->show('banner_default_image'); ?>); height='450px'">
 		<?php } ?>
 			<div class="text">
 				<div class="container">
