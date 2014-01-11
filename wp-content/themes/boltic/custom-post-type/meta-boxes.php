@@ -30,7 +30,7 @@ function boltic_register_meta_boxes( $meta_boxes )
 	// Better has an underscore as last sign
 	$prefix = 'puffar_';
 
-	// Sponsorer
+	// Puffar
 	$meta_boxes[] = array(
 		// Meta box id, UNIQUE per meta box. Optional since 4.1.5
 		'id' => 'puffar_information',
@@ -814,7 +814,13 @@ function posttyper_load_scripts() {
 				$($info).hide();
 				$($heading).hide();
 
-				//Om kryssrutan för "dedikerad sida" är vald så visas fält
+
+				if( $('#sponsor_dedikerad_sida').is(':checked')){
+					$($info).show();
+					$($heading).show();
+				}
+
+				//Om kryssrutan för "dedikerad sida" bockas/avbockas så visas/göms textinfo-fältet
 				$('#sponsor_dedikerad_sida').click(function(){
 				    if (this.checked) {
 				        $($info).show();

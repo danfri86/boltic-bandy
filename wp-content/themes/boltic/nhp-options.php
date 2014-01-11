@@ -178,7 +178,7 @@ $sections[] = array(
 			'id' => 'banner_default_image',
 			'type' => 'upload',
 			'title' => __('Banner default bild', 'nhp-opts'), 
-			//'sub_desc' => __('No validation can be done on this field type', 'nhp-opts'),
+			'sub_desc' => __('Bildstorlek: 1200x450px', 'nhp-opts'),
 			'desc' => __('Om en nyhet inte innehåller en bild så används denna bild på framsidan.', 'nhp-opts')
 		),
 		array(

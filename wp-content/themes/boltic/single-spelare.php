@@ -1,10 +1,20 @@
 
 <?php /*
-Denna sida används för alla enskilda nyheter.
-Används också för alla posttypers enskilda poster om dom inte har en egen single-posttyp.php.
+Denna sida används för alla enskilda spelare.
 */ ?>
 
 <?php get_header(); ?>
+
+<div class="room box"></div>
+
+	<div class="container single-page-nyhet" role="main">
+		<div class="main-content">
+
+			<div class="box-12">
+				<div class="pufftest">
+					<!--<div class="breadcrumbs"><h3><span>Start > Nyheter > </span>Förlust i hemmapremiären</h3></div>-->
+
+					<?php the_breadcrumb(); ?>
 
 <?php if (have_posts()) : ?>
 <?php while (have_posts()) : the_post(); ?>
@@ -59,7 +69,15 @@ Används också för alla posttypers enskilda poster om dom inte har en egen sin
 		echo apply_filters('the_content', $post_meta_data['spelare_info'][0]);
 	?>
 
-<?php endwhile; else:
+<?php endwhile; ?>
+</div>
+</div>		
+
+<!--/MAIN-->
+</div>
+
+<?php get_sidebar('sidebarMain'); ?>
+<?php else:
 	// Om det inte finns några poster kan vi göra något här
 ?>
 

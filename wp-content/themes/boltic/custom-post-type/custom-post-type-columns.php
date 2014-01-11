@@ -107,6 +107,7 @@ function medlemmar_kolumn_head($defaults) {
 	$defaults['medlemSedan'] = 'Medlem sedan';
 	$defaults['utgangsDatum'] = 'Utgångsdatum';
 	$defaults['email'] = 'E-post';
+	$defaults['betald'] = 'Avgift betald';
 
 	// Byt namn på title
    	$defaults['title'] = _x('Namn', 'column name');
@@ -124,7 +125,7 @@ function medlemmar_kolumn_content($column_name, $post_ID) {
 	
 	if($column_name == 'medlemSedan') {  
 		echo $post_meta_data['medlemmar_medlemSedan'][0];
-    } 
+    }
 	
 	if($column_name == 'utgangsDatum') {
 		echo $post_meta_data['medlemmar_utgangsdatum'][0];
@@ -132,8 +133,60 @@ function medlemmar_kolumn_content($column_name, $post_ID) {
 
 	if($column_name == 'email') {  
 		echo $post_meta_data['medlemmar_epost'][0];
-    } 
+    }
+
+    if($column_name == 'betald') {
+		if( $post_meta_data['medlemmar_betald'][0] )
+			echo 'Ja';
+    	else
+    		echo 'Nej';
+    }
 }
+
+// Dessa indenterade funktioner gör så att det går att sortera kolumnerna för bättre översikt
+	add_filter( 'manage_edit-medlemmar_sortable_columns', 'medlemmar_sortable_columns' );
+	function medlemmar_sortable_columns( $columns ) {
+		$columns['utgangsDatum'] = 'utgangsDatum';
+		$columns['betald'] = 'betald';
+		return $columns;
+	}
+
+	// Kör bara på edit sidan i admin
+	add_action( 'load-edit.php', 'my_edit_medlemmar_load' );
+	function my_edit_medlemmar_load() {
+		add_filter( 'request', 'my_sort_medlemmar' );
+	}
+
+	// Sortera medlemmarna
+	function my_sort_medlemmar( $vars ) {
+		/* Check if we're viewing the 'movie' post type. */
+		if ( isset( $vars['post_type'] ) && 'medlemmar' == $vars['post_type'] ) {
+			// Kolla om ordning är satt efter utgångsdatum
+			if ( isset( $vars['orderby'] ) && 'utgangsDatum' == $vars['orderby'] ) {
+				// Kolla mot dom egna metafälten
+				$vars = array_merge(
+					$vars,
+					array(
+						'meta_key' => 'medlemmar_utgangsdatum',
+						'orderby' => 'meta_value'
+					)
+				);
+			}
+			
+			// Kolla om ordning är satt efter betalning
+			if ( isset( $vars['orderby'] ) && 'betald' == $vars['orderby'] ) {
+				// Kolla mot dom egna metafälten
+				$vars = array_merge(
+					$vars,
+					array(
+						'meta_key' => 'medlemmar_betald',
+						'orderby' => 'meta_value'
+					)
+				);
+			}
+		}
+		return $vars;
+	}
 
 /*********************
 Kalender

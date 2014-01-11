@@ -1,7 +1,6 @@
 
 <?php /*
-Denna sida används för alla enskilda nyheter.
-Används också för alla posttypers enskilda poster om dom inte har en egen single-posttyp.php.
+Denna sida används för alla enskilda aktiviteter i kalendern.
 */ ?>
 
 <?php get_header(); ?>

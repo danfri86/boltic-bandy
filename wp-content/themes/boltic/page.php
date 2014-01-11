@@ -63,6 +63,10 @@
 					if( is_page('laget') )
 						include (TEMPLATEPATH . '/loop-spelare.php'); ?>
 
+					<?php //Om sidan är "Sponsorer"
+					if( is_page('sponsorer') )
+						include (TEMPLATEPATH . '/loop-sponsorer.php'); ?>
+
 				</div>
 			</div>	
 
