@@ -48,7 +48,7 @@ class randomPlayer_widget extends WP_Widget
     // Specificera mer om dom poster vi vill ha inom ()
     $args = array(
       'post_type' => 'spelare',
-      'post_count' => 1,
+      'posts_per_page' => 1,
       'orderby' => 'rand',
 
     );

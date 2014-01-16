@@ -276,9 +276,38 @@ function boltic_post_type() {
 	function remove_sponsortyp_meta() {
 		remove_meta_box( 'sponsorer_katdiv', 'sponsorer', 'side' );
 	}
-
 	add_action( 'admin_menu' , 'remove_sponsortyp_meta' );
-    
+
+
+
+
+
+
+	// Skapa en sida under "Medlemmar" i admin menyn
+	add_action('admin_menu', 'register_medlemmars_epost_sida');
+	function register_medlemmars_epost_sida(){
+		add_submenu_page( 'edit.php?post_type=medlemmar', 'Alla medlemmars e-post adresser', 'E-postadresser', 'edit_pages', 'e-postadresser', 'medlemmars_epost_sida' );
+	}
+
+    function medlemmars_epost_sida(){
+    	echo '<div class="wrap">';
+			$header = '<h2>Alla medlemmars e-postadresser</h2>';
+			$header .= '<p>Använd denna lista till att kopiera medlemmarnas e-postadresser för att snabbt exportera dom.</p>';
+			echo $header;
+
+			query_posts("post_type=medlemmar&posts_per_page=99999");
+			if (have_posts()) :
+			while (have_posts()) : the_post();
+				
+				$post_meta_data = get_post_custom($post->ID); //Hämta meta-box fälten för att använda nedan
+
+				echo '<p>'. $post_meta_data['medlemmar_epost'][0] .'</p>';
+
+			endwhile;
+			else:
+			endif;
+		echo '</div>';
+    }
     
 	// now let's add custom tags (these act like tags)
     // register_taxonomy( 'taggar', 
