@@ -74,6 +74,53 @@ query_posts("post_type=post&posts_per_page=1"); ?>
     <?php endif; //Slut ?>
 	<?php wp_reset_query(); // Nollställ loopen ?>
 
+	<?php // Specificera mer om dom poster vi vill ha inom ()
+	query_posts("post_type=sponsorer&posts_per_page=4&orderby=rand"); ?>
+	<?php if (have_posts()) : ?>
+		<div class="box-12">
+		<div class="puff">
+		<ul class="sponsorer-framsida">
+	<?php while (have_posts()) : the_post(); ?>
+		
+		<li>
+			<a href="<?php the_permalink(); ?>">
+
+				<?php
+				$post_meta_data = get_post_custom($post->ID); //Hämta meta-box fälten för att använda nedan
+
+				// Om sponsorn har en dedikerad sida, länka till den
+				if( get_post_meta($post->ID, 'sponsor_dedikerad_sida', true) ){
+					echo '<a href="';
+					the_permalink();
+					echo '">';
+				} else{ // Om sponsorn inte har en dedikerad sida
+					//Om sponsorn har en hemsida, länka dit
+					if( get_post_meta($post->ID, 'sponsor_url', true) )
+						echo '<a href="'. $post_meta_data['sponsor_url'][0] .'" target="_blank">';
+				}
+
+				// Visa logotyp
+				// Ändra "thumbnail" till den storlek som önskas
+				echo wp_get_attachment_image($post_meta_data['sponsor_logo'][0], 'sponsor-logo');
+
+				echo '<p>'. get_the_title() .'</p>';
+
+				// Stäng länk om det finns en dedikerad sida eller hemsida
+				if( get_post_meta($post->ID, 'dedikerad_sida', true) || get_post_meta($post->ID, 'sponsor_url', true) )
+					echo '</a>';
+				?>
+			</a>
+		</li>
+
+    <?php endwhile; ?>
+		</ul>
+		</div>
+		</div>
+	<?php else: ?>
+ 
+    <?php endif; //Slut ?>
+	<?php wp_reset_query(); // Nollställ loopen ?>
+
 	 <?php // Specificera mer om dom poster vi vill ha inom ()
 	// Gör så att den aktivitet med närmast datum från idag visas först
 	$today = date('Y-m-d');
@@ -238,7 +285,7 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 	<?php wp_reset_query(); // Nollställ loopen ?>
 
     <?php // Specificera mer om dom poster vi vill ha inom ()
-	query_posts("post_type=puffar"); ?>
+	query_posts("post_type=puffar&posts_per_page=1"); ?>
 	<?php if (have_posts()) : ?>
 		<div class="box-6">
 		<div class="puff ovrigt">

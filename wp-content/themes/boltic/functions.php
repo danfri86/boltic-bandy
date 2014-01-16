@@ -118,6 +118,7 @@ add_theme_support( 'post-thumbnails' );
 // Lägg till bildstorlek om inte Wordpress räcker till med sina tre vanliga.
 add_image_size( 'bannerimg', 1200, 450, true );
 add_image_size( 'lag-logo', 80, 80, false );
+add_image_size( 'sponsor-logo', 200, 200, false );
 // true=exakt crop, false=bredden som angivet, auto höjd
 
 

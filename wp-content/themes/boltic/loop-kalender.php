@@ -27,7 +27,15 @@ query_posts($args);
 	<?php $post_meta_data = get_post_custom($post->ID); ?>
 
 	<li>
-		<h2><?php the_title(); ?></h2>
+		<?php // Om laget är valt i listan, skriv ut det
+		if( get_post_meta($post->ID, 'kalender_motstandare', true) || get_post_meta($post->ID, 'kalender_alternativtlag', true) ) {
+			echo '<h2>Boltic vs. ';
+			echo $post_meta_data['kalender_motstandare'][0];
+			echo $post_meta_data['kalender_alternativtlag'][0];
+			echo '</h2>';
+		} else {
+			echo '<h2>'. get_the_title() .'</h2>';
+		} ?>
 			
 		<?php if( get_post_meta($post->ID, 'kalender_datum', true) ) {
 			echo '<p>Datum: '. $post_meta_data['kalender_datum'][0] .'</p>';

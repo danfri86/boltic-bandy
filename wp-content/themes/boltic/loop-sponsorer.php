@@ -21,9 +21,9 @@
 
 			// Visa logotyp
 			// Ändra "thumbnail" till den storlek som önskas
-			echo wp_get_attachment_image($post_meta_data['sponsor_logo'][0], 'thumbnail');
+			echo wp_get_attachment_image($post_meta_data['sponsor_logo'][0], 'sponsor-logo');
 
-			echo '<p>'. the_title() .'</p>';
+			echo '<p>'. get_the_title() .'</p>';
 
 			// Stäng länk om det finns en dedikerad sida eller hemsida
 			if( get_post_meta($post->ID, 'dedikerad_sida', true) || get_post_meta($post->ID, 'sponsor_url', true) )
