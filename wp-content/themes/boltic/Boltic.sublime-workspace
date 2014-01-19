@@ -86,6 +86,38 @@
 				"buffer_size": 16409,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 15359,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "loop-sponsorer.php",
+			"settings":
+			{
+				"buffer_size": 1186,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 13984,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "loop-kalender.php",
+			"settings":
+			{
+				"buffer_size": 1915,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -124,8 +156,16 @@
 	},
 	"file_history":
 	[
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/meta-boxes.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/newhem/wp-content/themes/newhem3/style.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/plugins/widget_randomPlayer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/loop-kontaktpersoner.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/loop-sponsorer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page-gastbok.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single-spelare.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/sidebar.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/meta-boxes.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single-sponsorer.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/index.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single-kalender.php",
@@ -133,10 +173,8 @@
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/js/modernizr.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/fields/menu_location_select/field_menu_location_select.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/fields/pages_multi_select/field_pages_multi_select.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/loop-sponsorer.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/fields/posts_select/field_posts_select.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/custom-post-type.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/custom-post-type-columns.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/fields/color/field_color.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/comments.php",
@@ -146,16 +184,12 @@
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/alex/js/sidr-ck.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/validation/str_replace/validation_str_replace.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/loop-spelare.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/sidebar.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/loop-kontaktpersoner.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/loop-kalender.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/footer.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/nhp-options.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/functions.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/options.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/afab/wp-content/themes/afab/footer.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/afab/wp-content/themes/afab/functions.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page-gastbok.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/personligtranare/wp-content/themes/pt/functions.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/fonts/fontello demo/css/fontello-ie7.css",
 		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/fonts/fontello demo/LICENSE.txt",
@@ -320,7 +354,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -336,8 +370,8 @@
 						"selection":
 						[
 							[
-								14993,
-								14993
+								14653,
+								14653
 							]
 						],
 						"settings":
@@ -346,6 +380,123 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 4678.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "functions.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2967,
+								2967
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1604.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "loop-sponsorer.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1186,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								1088
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13984,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8172,
+								8542
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3885.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "loop-kalender.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1915,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								478,
+								506
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -401,16 +552,32 @@
 		"selected_items":
 		[
 			[
+				"loop",
+				"loop-kalender.php"
+			],
+			[
+				"index",
+				"index.php"
+			],
+			[
+				"looop",
+				"loop-sponsorer.php"
+			],
+			[
+				"page",
+				"page.php"
+			],
+			[
+				"func",
+				"functions.php"
+			],
+			[
 				"meta",
 				"custom-post-type/meta-boxes.php"
 			],
 			[
 				"single",
 				"single-spelare.php"
-			],
-			[
-				"index",
-				"index.php"
 			],
 			[
 				"single-",
@@ -425,10 +592,6 @@
 				"custom-post-type/custom-post-type-columns.php"
 			],
 			[
-				"loop",
-				"loop-sponsorer.php"
-			],
-			[
 				"spelare",
 				"single-spelare.php"
 			],
@@ -439,10 +602,6 @@
 			[
 				"foo",
 				"footer.php"
-			],
-			[
-				"func",
-				"functions.php"
 			],
 			[
 				"gas",
