@@ -326,19 +326,19 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 		<?php $post_meta_data = get_post_custom($post->ID); ?>
 
 		<div class="calendar">
-			<h1><?php the_title(); ?></h1>
+			<h2><?php the_title(); ?></h2>
 				
 			<?php if( get_post_meta($post->ID, 'kalender_datum', true) ) {
-				echo '<p>Datum: '. $post_meta_data['kalender_datum'][0] .'</p>';
+				echo '<p><i class="fa fa-calendar"></i>  '. $post_meta_data['kalender_datum'][0] .'</p>';
 			} ?>
 
 			<?php if( get_post_meta($post->ID, 'kalender_tid', true) ) {
-				echo '<p>Tid: '. $post_meta_data['kalender_tid'][0] .'</p>';
+				echo '<p><i class="fa fa-clock-o"></i> '. $post_meta_data['kalender_tid'][0] .'</p>';
 			} ?>
 
 			<?php // Om plats är valt, skriv ut det
 			if( get_post_meta($post->ID, 'kalender_plats', true) ) {
-				echo $post_meta_data['kalender_plats'][0];
+				echo '<p><i class="fa fa-map-marker"></i> ' . $post_meta_data['kalender_plats'][0] . '</p>';
 			} ?>
 					
 			<?php if( get_post_meta($post->ID, 'kalender_info', true) ) {
@@ -346,7 +346,7 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 			} ?>
 		</div>
 	<?php endwhile; ?>
-		<a class="btn" href="<?php bloginfo('url'); ?>/kalender">
+		<a class="btn cal-btn" href="<?php bloginfo('url'); ?>/kalender">
 			Till kalendern <i class="fa fa-chevron-right"></i>
 		</a>
 

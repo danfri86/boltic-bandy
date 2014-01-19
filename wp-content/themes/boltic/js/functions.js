@@ -9,7 +9,7 @@ jQuery(document).ready(function($) {
 		$("#showComments").click(function() {
 
 			var btn = $("#showComments");
-			$("#comments").slideToggle(500);
+			$("#comments-nyhet").slideToggle(500);
 
 		});
 

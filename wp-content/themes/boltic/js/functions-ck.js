@@ -1,1 +1,1 @@
-jQuery(document).ready(function(e){e("#showComments").click(function(){var t=e("#showComments");e("#comments").slideToggle(500)});e("#menuTablet").click(function(){e.sidr("close","sidr")})});
+jQuery(document).ready(function(e){e("#showComments").click(function(){var t=e("#showComments");e("#comments-nyhet").slideToggle(500)});e("#menuTablet").click(function(){e.sidr("close","sidr")})});
