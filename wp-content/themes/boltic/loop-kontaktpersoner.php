@@ -19,7 +19,7 @@
 
 			<?php // Om laget är valt i listan, skriv ut det
 			if( get_post_meta($post->ID, 'kontaktperson_arbetsroll', true) ) {
-				echo '<p>'. $post_meta_data['kontaktperson_arbetsroll'][0] .'</p>';
+				echo '<p class="arbetsroll">'. $post_meta_data['kontaktperson_arbetsroll'][0] .'</p>';
 			} ?>
 
 			<?php // Om laget är valt i listan, skriv ut det
