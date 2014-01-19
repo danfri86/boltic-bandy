@@ -29,7 +29,7 @@
 
 			<?php // Om laget är valt i listan, skriv ut det
 			if( get_post_meta($post->ID, 'kontaktperson_epost', true) ) {
-				echo '<p> <i class="fa fa-envelope"></i> <a href="mailto:'. $post_meta_data['kontaktperson_epost'][0] . '">' .  $post_meta_data['kontaktperson_epost'][0]  .  '</a></p>';
+				echo '<p> <i class="fa fa-envelope-o"></i> <a href="mailto:'. $post_meta_data['kontaktperson_epost'][0] . '">' .  $post_meta_data['kontaktperson_epost'][0]  .  '</a></p>';
 			} ?>
 
 		</li>

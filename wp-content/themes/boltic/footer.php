@@ -28,7 +28,7 @@
 			<i class="fa fa-phone"> </i>  <b>Telefon</b> <?php $NHP_Options->show('footer_telefon'); ?>
 		</div>
 
-		<div class="box-3"><i class="fa fa-envelope"></i> <b>E-mail</b> <?php $NHP_Options->show('footer_epost'); ?>
+		<div class="box-3"><i class="fa fa-envelope-o"></i> <b>E-mail</b> <?php $NHP_Options->show('footer_epost'); ?>
 		</div>
 
 		<div class="box-3">
