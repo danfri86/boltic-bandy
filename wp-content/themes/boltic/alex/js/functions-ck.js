@@ -1,1 +1,0 @@
-$(document).ready(function(){$("#btn-mobile-open").click(function(){alert("hej")});$("#showComments").click(function(){$("#comments").slideToggle()});$("#menuTablet").click(function(){$.sidr("close","sidr")})});
