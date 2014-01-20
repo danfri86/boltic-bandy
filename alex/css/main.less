@@ -1018,30 +1018,36 @@ ul.sponsorer {
 .puff-sponsor {
 	float: left;
 	height: 165px !important;
-	line-height: 165px;
+	position: relative;
 
 	ul.sponsorer-framsida {
 		padding: 0;
 		margin: 0 auto;
+		position: relative;
+		height: 100%;
 
 		li {
 			list-style: none;
 			width: 25%;
-			display: inline-block;
+			display: table;
+			position: relative;
+			float: left;
     		height: 100%;
-			vertical-align: middle;
 			.box();
 			padding: 0;
 
-			img {
-				max-height: 100%;
+			a {
+				display: table-cell;
 				vertical-align: middle;
+
+			img {
 				margin: auto;
 				padding: 20px;
 			}
 			p {
 				display: none;
 			}
+		}
 		}
 	}
 }
