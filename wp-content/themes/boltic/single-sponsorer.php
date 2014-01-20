@@ -31,7 +31,7 @@ Denna sida används för alla enskilda sponsorer.
 
 	// Visa logotyp
 	// Ändra "thumbnail" till den storlek som önskas
-	echo wp_get_attachment_image($post_meta_data['sponsor_logo'][0], 'thumbnail');
+	echo wp_get_attachment_image($post_meta_data['sponsor_logo'][0], 'sponsor-logo');
 			
 	echo apply_filters('the_content', $post_meta_data['sponsor_info'][0]);
 	?>

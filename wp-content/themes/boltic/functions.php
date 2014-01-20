@@ -119,6 +119,7 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'bannerimg', 1200, 450, true );
 add_image_size( 'lag-logo', 80, 80, false );
 add_image_size( 'sponsor-logo', 200, 200, false );
+add_image_size( 'sponsor-logo', 148, 170, true );
 // true=exakt crop, false=bredden som angivet, auto höjd
 
 
