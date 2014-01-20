@@ -976,6 +976,16 @@ ul.kontaktpersoner {
 		}
 	}
 }
+
+.gform_wrapper {
+	ul {
+		padding: 0 !important;
+		margin: 0 !important;
+		li {
+			list-style: none !important;
+		}
+	}
+}
 /* --------------------------------------------------------------
 			SPONSORER
 -------------------------------------------------------------- */
@@ -1026,6 +1036,7 @@ ul.sponsorer {
 		position: relative;
 		height: 100%;
 
+
 		li {
 			list-style: none;
 			width: 25%;
@@ -1050,6 +1061,38 @@ ul.sponsorer {
 		}
 		}
 	}
+}
+
+@media only screen and (max-width: 540px) {
+.puff-sponsor {
+	float: left;
+	height: 165px !important;
+	position: relative;
+
+	ul.sponsorer-framsida {
+		padding: 0;
+		margin: 0 auto;
+		position: relative;
+		height: 100%;
+
+
+		li {
+			width: 50% !important;
+
+			a {
+
+			img {
+				margin: auto;
+				padding: 10px;
+			}
+			p {
+				display: none;
+			}
+		}
+		}
+	}
+}
+
 }
 
 /* --------------------------------------------------------------
