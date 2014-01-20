@@ -1014,8 +1014,8 @@ ul.sponsorer {
 }
 
 .puff-sponsor {
-
-	height: 25px !important;
+	float: left;
+	height: 165px !important;
 
 	ul.sponsorer-framsida {
 		padding: 0;
@@ -1024,13 +1024,19 @@ ul.sponsorer {
 		li {
 			list-style: none;
 			width: 25%;
-			height: 100%;
+			display: inline-block;
+    		height: 100%;
 			vertical-align: middle;
 			.box();
+			padding: 0;
 
 			img {
-				max-height: 25px;
+				max-height: 100%;
 				vertical-align: middle;
+				margin: auto;
+			}
+			p {
+				display: none;
 			}
 		}
 	}
