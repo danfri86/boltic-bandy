@@ -964,6 +964,16 @@ ul.kontaktpersoner {
 	position: absolute;
 }
 
+#gform_wrapper_2 {
+	ul {
+		padding: 0;
+		margin: 0;
+
+		li {
+			list-style: none;
+		}
+	}
+}
 /* --------------------------------------------------------------
 			SPONSORER
 -------------------------------------------------------------- */
@@ -1003,14 +1013,26 @@ ul.sponsorer {
 	}
 }
 
-ul.sponsorer-framsida {
-	padding: 0;
-	margin: 0 auto;
+.puff-sponsor {
 
-	li {
-		list-style: none;
-		width: 25%;
-		.box();
+	height: 25px !important;
+
+	ul.sponsorer-framsida {
+		padding: 0;
+		margin: 0 auto;
+
+		li {
+			list-style: none;
+			width: 25%;
+			height: 100%;
+			vertical-align: middle;
+			.box();
+
+			img {
+				max-height: 25px;
+				vertical-align: middle;
+			}
+		}
 	}
 }
 

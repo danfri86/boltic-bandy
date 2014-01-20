@@ -78,7 +78,7 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 	query_posts("post_type=sponsorer&posts_per_page=4&orderby=rand"); ?>
 	<?php if (have_posts()) : ?>
 		<div class="box-12">
-		<div class="puff">
+		<div class="puff puff-sponsor">
 		<ul class="sponsorer-framsida">
 	<?php while (have_posts()) : the_post(); ?>
 		
