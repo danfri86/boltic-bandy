@@ -1,0 +1,11 @@
+/* Copyright (c) 2007 Paul Bakaus (paul.bakaus@googlemail.com) and Brandon Aaron (brandon.aaron@gmail.com || http://brandonaaron.net)
+ * Dual licensed under the MIT (http://www.opensource.org/licenses/mit-license.php)
+ * and GPL (http://www.opensource.org/licenses/gpl-license.php) licenses.
+ *
+ * $LastChangedDate$
+ * $Rev$
+ *
+ * Version: @VERSION
+ *
+ * Requires: jQuery 1.2+
+ */(function(e){function t(t,n){return parseInt(e.curCSS(t.jquery?t[0]:t,n,!0))||0}e.dimensions={version:"@VERSION"};e.each(["Height","Width"],function(n,r){e.fn["inner"+r]=function(){if(!this[0])return;var e=r=="Height"?"Top":"Left",n=r=="Height"?"Bottom":"Right";return this.css("display")!="none"?this[0]["client"+r]:t(this,r.toLowerCase())+t(this,"padding"+e)+t(this,"padding"+n)};e.fn["outer"+r]=function(n){if(!this[0])return;var i=r=="Height"?"Top":"Left",s=r=="Height"?"Bottom":"Right";n=e.extend({margin:!1},n||{});var o=this.css("display")!="none"?this[0]["offset"+r]:t(this,r.toLowerCase())+t(this,"border"+i+"Width")+t(this,"border"+s+"Width")+t(this,"padding"+i)+t(this,"padding"+s);return o+(n.margin?t(this,"margin"+i)+t(this,"margin"+s):0)}});e.each(["Left","Top"],function(t,n){e.fn["scroll"+n]=function(t){if(!this[0])return;return t!=undefined?this.each(function(){this==window||this==document?window.scrollTo(n=="Left"?t:e(window).scrollLeft(),n=="Top"?t:e(window).scrollTop()):this["scroll"+n]=t}):this[0]==window||this[0]==document?self[n=="Left"?"pageXOffset":"pageYOffset"]||e.boxModel&&document.documentElement["scroll"+n]||document.body["scroll"+n]:this[0]["scroll"+n]}});e.fn.extend({position:function(){var e=0,n=0,r=this[0],i,s,o,u;if(r){o=this.offsetParent();i=this.offset();s=o.offset();i.top-=t(r,"marginTop");i.left-=t(r,"marginLeft");s.top+=t(o,"borderTopWidth");s.left+=t(o,"borderLeftWidth");u={top:i.top-s.top,left:i.left-s.left}}return u},offsetParent:function(){var t=this[0].offsetParent;while(t&&!/^body|html$/i.test(t.tagName)&&e.css(t,"position")=="static")t=t.offsetParent;return e(t)}})})(jQuery);

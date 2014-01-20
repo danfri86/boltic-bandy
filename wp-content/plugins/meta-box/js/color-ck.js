@@ -1,0 +1,4 @@
+/**
+ * Update color picker element
+ * Used for static & dynamic added elements (when clone)
+ */jQuery(document).ready(function(e){function t(){var t=e(this),n=t.closest(".rwmb-clone"),r=t.siblings(".rwmb-color-picker");t.val()||t.val("#");if(typeof jQuery.wp=="object"&&typeof jQuery.wp.wpColorPicker=="function"){n.length>0&&t.appendTo(n).siblings("div.wp-picker-container").remove();t.wpColorPicker()}else r.farbtastic(t)}e(":input.rwmb-color").each(t);e(".rwmb-input").on("clone",":input.rwmb-color",t).on("focus",".rwmb-color",function(){e(this).siblings(".rwmb-color-picker").show();return!1}).on("blur",".rwmb-color",function(){e(this).siblings(".rwmb-color-picker").hide();return!1})});

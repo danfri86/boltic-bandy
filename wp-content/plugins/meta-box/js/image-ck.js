@@ -1,0 +1,1 @@
+jQuery(function(e){e(".rwmb-images").each(function(){var t=e(this),n={action:"rwmb_reorder_images",_ajax_nonce:t.data("reorder_nonce"),post_id:e("#post_ID").val(),field_id:t.data("field_id")};t.sortable({placeholder:"ui-state-highlight",items:"li",update:function(){n.order=t.sortable("serialize");e.post(ajaxurl,n)}})})});

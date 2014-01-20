@@ -1,0 +1,1 @@
+jQuery(function(e){e(".rwmb-oembed-wrapper .spinner").hide();e("body").on("click",".rwmb-oembed-wrapper .show-embed",function(){var t=e(this),n=t.siblings(".spinner"),r={action:"rwmb_get_embed",url:t.siblings("input").val()};n.show();e.post(ajaxurl,r,function(e){n.hide();t.siblings(".embed-code").html(e.data)},"json");return!1})});

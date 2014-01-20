@@ -1,0 +1,1 @@
+jQuery(function(e){e(".rwmb-slider").each(function(){var t=e(this),n=t.siblings("input"),r=t.siblings(".rwmb-slider-value-label").find("span"),i=n.val(),s=t.data("options");if(!i){i=0;n.val(0);r.text("0")}else r.text(i);s.value=i;s.slide=function(e,t){n.val(t.value);r.text(t.value)};t.slider(s)})});

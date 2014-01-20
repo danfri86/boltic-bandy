@@ -882,6 +882,7 @@ ul.kontaktpersoner {
 		list-style: none;
 		width: 32%;
 		display: inline-block;
+		float: left;
 		margin-top: 45px;
 
 		h2 {
@@ -985,6 +986,7 @@ ul.sponsorer {
 
 		img {
 			width: 100%;
+			padding: 20px;
 
 			&:hover {
 				opacity:.6;
@@ -1105,7 +1107,17 @@ ul.kalender-poster {
 	}
 
 	#respond {
-		margin-top: 80px;
+		margin-top: 20px;
+
+		.fb-social-plugin {
+			width: 100% !important;
+			span {
+				width: 100% !important; 
+				iframe {
+					width: 100% !important;
+				}
+			}
+		}
 	}
 
 	#commentform {

@@ -1,0 +1,1 @@
+jQuery(function(e){e.each(gfcpt_tag_inputs.tag_inputs,function(){e(this.input).tagit({availableTags:gfcpt_tag_taxonomies[this.taxonomy],removeConfirmation:!0,allowSpaces:!0,animate:!1})})});

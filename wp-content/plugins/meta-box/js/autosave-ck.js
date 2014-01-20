@@ -1,0 +1,1 @@
+jQuery(function(e){e(document).ajaxSend(function(t,n,r){typeof r.data!="undefined"&&-1!=r.data.indexOf("action=autosave")&&e(".rwmb-meta-box").each(function(){var t=e(this);t.data("autosave")==1&&(r.data+="&"+t.find(":input").serialize())})})});
