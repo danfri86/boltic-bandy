@@ -7,7 +7,7 @@ Används också för alla posttypers enskilda poster om dom inte har en egen sin
 
 <div class="room box"></div>
 
-	<div class="container single-page-nyhet" role="main">
+	<div class="container single-page-nyhet sida-nyhet" role="main">
 		<div class="main-content">
 
 			<div class="box-12">
