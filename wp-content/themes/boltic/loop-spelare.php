@@ -12,7 +12,7 @@
 				the_permalink();
 			echo '">';
 			// Ändra "thumbnail" till den storlek som önskas
-			echo wp_get_attachment_image($post_meta_data['spelare_bild'][0], 'thumbnail');
+			echo wp_get_attachment_image($post_meta_data['spelare_bild'][0], 'spelarprofil');
 
 			echo '<p>';
 			if( get_post_meta($post->ID, 'spelare_trojnummer', true) ) {
