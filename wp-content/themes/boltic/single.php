@@ -38,7 +38,7 @@ echo $category[0]->cat_name; ?></span>
 </div>
 </div>
 
-<div class="box-12" id="comments">
+<div class="box-12" id="comments-nyhet">
 	<div class="pufftest">
 		<?php comments_template(); ?>
 	</div>

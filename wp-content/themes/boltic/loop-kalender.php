@@ -20,7 +20,7 @@ query_posts($args);
 ?>
 
 <?php if (have_posts()) : ?>
-	<ul>
+	<ul class="kalender-poster">
 <?php while (have_posts()) : the_post();
 	// Här körs loopen för dom poster som finns
 ?>
@@ -28,26 +28,26 @@ query_posts($args);
 
 	<li>
 		<?php // Om laget är valt i listan, skriv ut det
-		if( get_post_meta($post->ID, 'kalender_motstandare', true) || get_post_meta($post->ID, 'kalender_alternativtlag', true) ) {
-			echo '<h2>Boltic vs. ';
-			echo $post_meta_data['kalender_motstandare'][0];
-			echo $post_meta_data['kalender_alternativtlag'][0];
-			echo '</h2>';
-		} else {
-			echo '<h2>'. get_the_title() .'</h2>';
-		} ?>
++		if( get_post_meta($post->ID, 'kalender_motstandare', true) || get_post_meta($post->ID, 'kalender_alternativtlag', true) ) {
++			echo '<h2>Boltic vs. ';
++			echo $post_meta_data['kalender_motstandare'][0];
++			echo $post_meta_data['kalender_alternativtlag'][0];
++			echo '</h2>';
++		} else {
++			echo '<h2>'. get_the_title() .'</h2>';
++		} ?>
 			
 		<?php if( get_post_meta($post->ID, 'kalender_datum', true) ) {
-			echo '<p>Datum: '. $post_meta_data['kalender_datum'][0] .'</p>';
+			echo '<small><i class="fa fa-calendar-o"></i> '. $post_meta_data['kalender_datum'][0] .'</small>';
 		} ?>
 
 		<?php if( get_post_meta($post->ID, 'kalender_tid', true) ) {
-			echo '<p>Tid: '. $post_meta_data['kalender_tid'][0] .'</p>';
+			echo '<small><i class="fa fa-clock-o"></i> '. $post_meta_data['kalender_tid'][0] .'</small>';
 		} ?>
 
 		<?php // Om plats är valt, skriv ut det
 		if( get_post_meta($post->ID, 'kalender_plats', true) ) {
-			echo $post_meta_data['kalender_plats'][0];
+			echo '<small><i class="fa fa-map-marker"></i> '. $post_meta_data['kalender_plats'][0] .'</small>';
 		} ?>
 				
 		<?php if( get_post_meta($post->ID, 'kalender_info', true) ) {

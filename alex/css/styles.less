@@ -1,0 +1,130 @@
+/* --------------------------------------------------------------
+
+	                                                             
+	,--.,------.    ,-----.   ,-----. ,--.,--------.,--. ,-----. 
+	|  ||  .---'    |  |) /_ '  .-.  '|  |'--.  .--'|  |'  .--./ 
+	|  ||  `--,     |  .-.  \|  | |  ||  |   |  |   |  ||  |     
+	|  ||  |`       |  '--' /'  '-'  '|  '--.|  |   |  |'  '--'\ 
+	`--'`--'        `------'  `-----' `-----'`--'   `--' `-----' 
+
+
+	TABLE OF CONTENTS
+	------------------
+	0. import & variables
+	1. base.less
+	2. site
+		2.1 header.less
+		2.2 main.less
+	3. grid.less
+	4. responsiveness 
+		4.1 tablet.less
+		4.2 responsive-mobile.less
+	5. print
+
+	to-do
+	------------------
+	länkar i blogg-inlägg behöver någon färg
+	sponsorer till framsidan
+	laget
+
+	<a href="" class="fb"><i class="fa fa-facebook"></i> Gilla på Facebook</a>
+
+	<a href="" class="twit"><i class="fa fa-twitter"></i> Följ på Twitter</a>
+
+	<a href="" class="insta"><i class="fa fa-instagram"></i> Följ på Instagram</a></div>
+
+	<a href="" class="shop"><i class="fa fa-shopping-cart"></i> Besök vår webshop</a></div>
+
+
+
+----------------------------------------------------------------
+		0. IMPORTS & VARIABLES
+-------------------------------------------------------------- */
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800');
+@import url('normalize.css');
+@import url('font-awesome.min.css');
+@import url('http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic');
+@import url('sidr.css');
+
+
+@maincolor: #006eb6;
+@maindarker: #226089;
+@fb-blue: #3B5998;
+@tw-blue: #55ACEE;
+@bodycolor: #4D4D4F;
+
+/* --------------------------------------------------------------
+		1. base.less
+-------------------------------------------------------------- */
+
+@import url('base.less');
+
+/* --------------------------------------------------------------
+		2. site
+			4 2.1 header.less
+-------------------------------------------------------------- */
+
+@import url('header.less');
+
+/* --------------------------------------------------------------
+			2.2 main.less
+-------------------------------------------------------------- */
+
+@import url('main.less');
+
+/* --------------------------------------------------------------
+		3. grid.less
+-------------------------------------------------------------- */
+
+@import url('grid.less');
+
+/* --------------------------------------------------------------
+		4. responsiveness
+-------------------------------------------------------------- */
+
+@media screen and (max-width: 1170px) {
+	.container {
+			max-width: 1100px;
+		}
+
+		.site--intro {
+			width: 100%;
+			max-width: 1000px;
+	}
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {}
+
+/* --------------------------------------------------------------
+				4.1 tablet.less
+-------------------------------------------------------------- */
+
+@import url('tablet.less');
+
+/* --------------------------------------------------------------
+				4.2 responsive-mobile.less
+-------------------------------------------------------------- */
+
+@import url('responsive-mobile.less');
+
+/* --------------------------------------------------------------
+		5. PRINT
+-------------------------------------------------------------- */
+
+@media print{
+*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}
+a,a:visited{text-decoration:underline}
+a[href]:after{content:" (" attr(href) ")"}
+abbr[title]:after{content:" (" attr(title) ")"}
+.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}
+pre,blockquote{border:1px solid #999;page-break-inside:avoid}
+thead{display:table-header-group}
+tr,img{page-break-inside:avoid}
+img{max-width:100% !important}
+@page{margin:2cm}
+p,h2,h3{orphans:3;widows:3}
+h2,h3{page-break-after:avoid}
+}
+

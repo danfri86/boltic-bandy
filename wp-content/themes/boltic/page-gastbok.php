@@ -55,18 +55,12 @@ Template name: Gästbok
 					<?php if( get_post_meta($post->ID, 'sidor_content', true) ) {
 						echo apply_filters('the_content', $post_meta_data['sidor_content'][0]);
 					} ?>
+
+						<?php comments_template(); ?>
+
 				</div>
 			</div>	
 			
-			<?php /*
-			<div class="box-12" id="comments">
-				<div class="pufftest">
-					<?php comments_template(); ?>
-				</div>
-			</div>
-			*/ ?>
-
-			<?php comments_template(); ?>
 
 		<!--/MAIN-->
 		</div>

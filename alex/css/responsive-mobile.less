@@ -1,0 +1,234 @@
+@media only screen and (max-width: 540px) {
+
+	#wpadminbar {
+		display: none;
+	}
+
+	[class*='box-'],[class*='tablet-'] {
+		width: 100%;
+		margin-left: 0;
+		display: block;
+	}
+	
+	.phone-6 {width: 50%;}
+
+
+	body {
+		font-size: 90%;
+		background: white;
+	}
+
+
+/* --------------------------------------------------------------
+		HEADER
+-------------------------------------------------------------- */
+	
+	.top--menu {
+		display:none;
+	}
+
+	.top,.top-smal {
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+
+		.btn-mobile{
+			opacity: 1;
+			padding: 0;
+			top: -49px;
+			right: 10px;
+			font-size: 29px !important;
+			position: absolute;
+		}
+
+			#right-menu {display: block;}
+			#btn-mobile-open {display: block !important;}
+
+			-webkit-transition: all 200ms;
+			-moz-transition: all 200ms;
+			-ms-transition: all 200ms;
+			-o-transition: all 200ms;
+			transition: all 200ms;
+
+			height:60px;
+			position: static;
+			overflow: hidden;
+			z-index: 999;
+
+			li {padding: 10px 0 !important;
+				.search {
+					display: none;
+				}
+			}
+
+			img { width: 50px !important; top: 5px !important;left: 20px !important;}
+
+				nav {
+					width: 100% !important;
+					 ul {
+						padding:0;
+						width: 100%;
+					
+						li {
+							display: block !important;
+							border-bottom: 1px solid rgba(0,0,0,.1);
+							&:first-child { 
+							margin-top: 20px;
+						}
+				
+							 small {
+							font-size: 70%;
+				}
+			}
+		}
+	}
+}
+
+
+	.sidebar {
+		display: none;
+	}
+
+	.main-content, .puff, .pufftest{
+		width: 100% !important;
+		border: none !important;
+		background: white;
+	}
+
+	.puff {
+		height: auto !important;
+	}
+
+
+
+	.room {
+		height: 0px;
+		padding: 0;
+	}
+
+/* --------------------------------------------------------------
+		MAIN
+-------------------------------------------------------------- */
+
+
+.container[role=main] {
+	padding:0;
+	.main-content {
+		width: 100% !important;
+		margin-top: 10px;
+
+		.nyheter {
+
+		}
+	
+	.nyhet--container {
+		margin:5px 0;
+		height: auto !important;
+		.btn {display: none;}
+
+		.nyhet--bild {
+			display: none;
+		}
+
+			.nyhet--innehall {
+				width: 100%;
+				padding: 10px 0;
+			}
+		}
+	}
+}
+
+	.site--intro {
+		height: 200px;
+
+		.text {
+			span
+			{
+				p {display: none !important;}
+		}
+			a.btn {
+				display: none;
+			}
+		}
+	}
+	
+	.nastamatch {
+		img {
+			display: none;
+		}
+	}
+
+	.phone-hidden{display: none;}
+
+
+
+	footer[role=contentinfo] {
+		margin-top: 30px !important;
+
+		[class*='box-'] {
+			padding: 12px 0;
+		}
+
+	}
+
+.single-page-nyhet {
+	.main-content {
+		.box-12 {
+			.pufftest {
+				.nyhetsInfo {
+					span {
+						width: 100%;
+						padding: 5px 0;
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
+}
+
+.boltic {
+	height: auto !important;
+	.box-6, .box-8 {
+		padding: 0 !important;
+	}
+
+	h3 {
+		margin: 0;
+	}
+}
+
+.container[role=main] .main-content .boltic .sponsor, .container[role=main] .main-content .boltic .center {
+	text-align: center;
+	margin: 0 auto;
+	display: none; /*kanske*/
+}
+
+.container[role=main] .main-content .nyheter .btn {
+	position: relative;
+	margin-top: 5px;
+	display: block;
+	right: 0;
+
+}
+
+.container[role=main] .main-content .single-page-nyhet {
+	img {
+		display: none;
+	}
+
+	h3 {
+		margin: 0;
+	}
+
+	height:auto !important;
+
+}
+
+.container[role=main] .main-content .ovrigt a.btn {
+	margin-top: 15px;
+}
+
+
+
+/* SLUT */
+}
+

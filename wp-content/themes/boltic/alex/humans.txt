@@ -1,0 +1,21 @@
+
+/* FRONT END TEAM */ 
+Alexander Hansson w/ help from Oskar Kroon and Jonatan Lidholm Jansson                
+Site: http://alexanderhansson.se, http://oskarkroon.se                     
+Twitter: @hejhansson                        
+Location: Karlstad, Sweden.
+
+/* BACK END TEAM */ 
+Daniel Friberg               
+Site: http://danielfriberg.se                      
+Twitter: @dfriberg86                        
+Location: Karlstad, Sweden.
+							
+/* THANKS */						
+http://ninetech.com
+
+/* SITE */                         
+Last update: YYYY/MM/DD                        
+Standards: HTML5, LESS                            
+Components: Modernizr, jQuery, Classie, WordPress                   
+Software: Sublime Text 2, Coda, CodeKit, Anvil, GitHub.

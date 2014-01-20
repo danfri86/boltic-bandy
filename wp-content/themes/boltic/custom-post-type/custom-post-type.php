@@ -276,12 +276,8 @@ function boltic_post_type() {
 	function remove_sponsortyp_meta() {
 		remove_meta_box( 'sponsorer_katdiv', 'sponsorer', 'side' );
 	}
+
 	add_action( 'admin_menu' , 'remove_sponsortyp_meta' );
-
-
-
-
-
 
 	// Skapa en sida under "Medlemmar" i admin menyn
 	add_action('admin_menu', 'register_medlemmars_epost_sida');
@@ -307,34 +303,6 @@ function boltic_post_type() {
 			else:
 			endif;
 		echo '</div>';
-    }
-    
-	// now let's add custom tags (these act like tags)
-    // register_taxonomy( 'taggar', 
-    // 	array('puffar'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
-    // 	array('hierarchical' => false,    /* if this is false, it acts like tags */                
-    // 		'labels' => array(
-    // 			'name' => __( 'puff Taggar' ), /* name of the custom taxonomy */
-    // 			'singular_name' => __( 'puff Tag' ), /* single taxonomy name */
-    // 			'search_items' =>  __( 'Sök Taggar' ), /* search title for taxomony */
-    // 			'all_items' => __( 'Alla Taggar' ),  /* all title for taxonomies */
-    // 			'parent_item' => __( 'Förra Taggen' ), /* parent title for taxonomy */
-    // 			'parent_item_colon' => __( 'Förra Taggen:' ), /* parent taxonomy title */
-    // 			'edit_item' => __( 'Redigera Tagg' ), /* edit custom taxonomy title */
-    // 			'update_item' => __( 'Uppdatera Tagg' ), /* update title for taxonomy */
-    // 			'add_new_item' => __( 'Lägg till ny Tagg' ), /* add new title for taxonomy */
-    // 			'new_item_name' => __( 'Nytt Tagg Namn' ) /* name title for taxonomy */
-    // 		),
-    // 		'show_ui' => true,
-    // 		'query_var' => true,
-    // 	)
-    // ); 
-    
-    /*
-    	looking for custom meta boxes?
-    	check out this fantastic tool:
-    	https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress
-    */
-	
+    }	
 
 ?>

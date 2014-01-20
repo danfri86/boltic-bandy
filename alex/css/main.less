@@ -1,0 +1,1127 @@
+/* --------------------------------------------------------------
+			4.2 SITE INTRO
+-------------------------------------------------------------- */
+	
+	.site--intro {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		height: 580px;
+		background-size: cover !important;
+		background-repeat: no-repeat;
+		background-position: top center;
+		position: relative;
+		-webkit-transition: all 200ms;
+		-moz-transition: all 200ms;
+		-ms-transition: all 200ms;
+		-o-transition: all 200ms;
+		transition: all 200ms;
+
+		&:hover {
+			color:white !important;
+		}
+
+		.text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgba(0,0,0,.5);
+			color: white;
+			-webkit-transition: all 200ms;
+			-moz-transition: all 200ms;
+			-ms-transition: all 200ms;
+			-o-transition: all 200ms;
+			transition: all 200ms;
+
+			&:hover {
+				background:rgba(0,0,0,.7);
+				-webkit-transition: all 200ms;
+				-moz-transition: all 200ms;
+				-ms-transition: all 200ms;
+				-o-transition: all 200ms;
+				transition: all 200ms;
+
+				.btn { opacity: .8;}
+			}
+
+			.btn {
+				color: white;
+				position: absolute;
+				right: 20px;
+				top: 17px;
+				border: 1px solid white;
+
+				i {
+					color: white;
+				}
+
+				&:hover  {
+					opacity:1;
+					border: 1px solid white;
+				}
+			}
+
+				.container {
+
+				}
+
+
+					span {
+						padding: 15px 10px;
+						margin: 0;
+						display: block;
+
+						&:hover {
+							color:white !important;
+						}
+
+							h1 {font-weight: 600; margin: 0 0 0 0;font-size: 1em !important;}
+							p {margin: 0 0 -3px 0;}
+
+							h4,p {
+								display: block;
+							}
+			}
+		}
+	}
+
+
+/* --------------------------------------------------------------
+			4.3 CONTENT
+-------------------------------------------------------------- */
+
+.container[role=main] {
+
+	h3 {
+		font-size: 1em;
+		text-transform: uppercase;
+		font-weight: 400;
+		margin-top: 0;
+	}
+
+		p {
+			padding: 0;
+			margin: 0;
+		}
+	
+		.main-content {
+			width: 70%;
+			float: left;
+			margin-top: 30px;
+
+			[class*='box-'] {
+				padding: 10px 10px;
+			}
+
+				.puff {
+					width: 100%;
+					margin: 0 auto;
+					padding: 25px 30px 20px 30px;
+					height: 280px;
+					background: white;
+					border-radius: 4px;
+					border: 1px solid rgba(0,0,0,.12);
+
+						h2 {margin:6px 0 2px 0;}
+		}
+	
+
+/* --------------------------------------------------------------
+			NYHETER
+-------------------------------------------------------------- */
+
+	.nyheter {
+		height: 300px !important;
+		position: relative;
+
+		hr {
+			height: 0px;
+			border: none;
+			border-bottom: 1px solid rgba(0,0,0,.1);
+		}
+
+		.btn {
+			border: none;
+			position: absolute;
+			right: 20px;
+			bottom: 10px;
+			font-size: smaller;
+		}
+	}
+
+.nyhet--container {
+	width: 100%;
+	position:relative;
+	height: 100px;
+	margin-bottom:10px;
+
+		.nyhet--bild {
+			margin-top: 5px;
+		}
+
+		.box {
+			padding: 1px 5px;
+		}
+
+	.nyhet--innehall {
+		width: 70%;
+		padding-left: 30px;
+	}
+}
+
+.nyhet--container:last-child { 
+}
+
+/* --------------------------------------------------------------
+			BLI EN DEL AV BOLTIC
+-------------------------------------------------------------- */
+
+.boltic {
+	h2 {
+		margin-bottom: 8px;
+	}
+
+		.btn {
+			margin-top: 15px;
+		}
+
+		.sponsor {
+			margin-top: 17px;
+		}
+
+		img {
+			margin-top: 12px;
+		}
+	}
+}
+
+/* --------------------------------------------------------------
+			NÄSTA MATCH
+-------------------------------------------------------------- */
+
+	.logos {
+		margin-top: -20px;
+
+		img {
+			width: 80px !important;
+			margin: 0 auto;
+		}
+	}
+	
+		span.lagen {
+			text-align: center;
+			display: block;
+			padding:7px 0;
+			border-bottom: 1px solid rgba(0,0,0,.1);
+		}
+		span.arena {
+			text-align: center;
+			display: block;
+			padding: 7px 0;
+			border-bottom: 1px solid rgba(0,0,0,.1);
+		}
+
+		span.tid {
+			text-align: center;
+			display: block;
+			padding: 7px 0;
+		}
+
+		span.vs {
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		.nastamatch span i {
+			margin-right: 5px;
+		}
+
+		.logos span:first-child {
+			margin-top: 10px;
+		}
+
+		.ovrigt  {
+			small {line-height: 2.5;}
+				h2 {padding-top:0px;}
+				a.btn {
+					position: absolute;
+					right: 40px;
+					bottom:40px;
+				}
+	}
+}
+
+
+/* --------------------------------------------------------------
+			KALENDER landing page
+-------------------------------------------------------------- */
+
+.puff {
+	position: relative;
+	.calendar {		
+
+		font-size: 80%;
+
+			 p {
+				display: inline-block; 
+				padding: 8px;
+				width: 33%;
+				margin-left: -3px;
+				text-align: center;
+				border-bottom: 1px solid rgba(0,0,0,.1);
+
+				&:last-child {
+					border:none;
+					text-align: left;
+					height: 70px;
+					width: 100%;
+					overflow: hidden;
+				}
+
+				i {
+					margin-right: 3px;
+				}
+
+		}
+	}
+
+		.cal-btn {
+			position: absolute;
+			right: 40px;
+			bottom:35px;
+		}
+}
+
+/* --------------------------------------------------------------
+			SIDEBAR TABLET
+-------------------------------------------------------------- */
+
+	.toggleSidebar {
+		background: white;
+		font-family: 'Open Sans', sans-serif;
+		border-right: 3px solid rgba(0,0,0,.1);
+
+		& > div {
+			float: left;
+			display: inline-block;
+			padding: 20px 5px;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		#menuTablet {
+			font-size: 26px;
+			font-weight: 700;
+			margin-bottom: 20px;
+
+			span {
+				font-size: 16px;
+				font-weight: 600;
+				position: absolute;
+				letter-spacing: 1px;
+				top: 25px;
+				left: 43px;
+				text-transform: uppercase;
+			}
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+
+			li {
+				position: relative;
+				font-weight: 600;
+				display: block !important;
+
+				i {
+					position: absolute;
+					top: 24px;
+					right: 0;
+					font-weight: 100;
+				}
+
+				&:first-child {
+					border:none;
+					font-weight: bolder;
+				}
+
+				&:last-child {
+					font-size: 15px !important;
+				}
+
+				display: block;
+				border-bottom: 1px solid rgba(0,0,0,.3);
+				padding: 10px 0;
+				small {display: block;font-weight: 400;letter-spacing: .2px;color:rgba(0,0,0,0.4);font-size: 80%; }
+			}
+		}
+
+	i {
+		margin-right: 5px;
+	}
+
+	input[type="text"] {
+		font-family: 'Open Sans', sans-serif;
+		border: 1px solid rgba(0,0,0,.3);
+		border-radius: 4px;
+		padding: 22px 12px;
+		display: block;
+		font-weight: 400;
+		width: 100%;
+		margin: 15px 0 -10px;
+	}
+}
+
+/* --------------------------------------------------------------
+			SIDEBAR SOCIALS
+-------------------------------------------------------------- */
+
+.social {
+	
+	border-bottom: 1px solid rgba(0,0,0,.3);
+
+	.fb , .twit, .insta, .shop {
+		display: block;
+		text-align: center;
+		position: relative;
+		padding: 12px 10px;
+		color: white;
+	}
+
+	.fb {
+		background: @fb-blue;
+
+		&:hover {color:white;}
+
+		i {
+			position: absolute;
+			left: 20px;
+			top: 17px;
+		}
+	}
+
+	.shop {
+		background: @bodycolor;
+
+		&:hover {color:white;}
+
+		i {
+			position: absolute;
+			left: 20px;
+			top: 17px;
+		}
+	}
+
+	.insta {
+		background: #3f729b;
+
+		&:hover {color:white;}
+
+		i {
+			position: absolute;
+			left: 20px;
+			top: 17px;
+		}
+	}
+
+	.twit {
+		background: @tw-blue;
+		margin-top: 10px;
+
+		&:hover {color:white;}
+
+		i {
+			position: absolute;
+			left: 20px;
+			top: 17px;
+		}
+	}
+}
+
+/* --------------------------------------------------------------
+			TABELLEN
+-------------------------------------------------------------- */
+
+.tabellen {
+		border-bottom: 1px solid rgba(0,0,0,.3);
+		margin-bottom: 10px;
+
+ iframe {
+		border: none;
+		margin-left: -8px;
+		margin-bottom: 10px;
+		
+	}
+
+	h3 {
+		padding-top: 10px;
+	}
+}
+
+/* --------------------------------------------------------------
+			GÄSTBOK
+-------------------------------------------------------------- */
+
+.gastbok {
+	border-bottom: 1px solid rgba(0,0,0,.3);
+		margin-bottom: 10px;
+	a {
+		margin-top:12px;
+	}
+
+	input[type="text"] {
+		margin-bottom: 0;
+	}
+}
+
+/* --------------------------------------------------------------
+			A-LAGET
+-------------------------------------------------------------- */
+
+.alaget {
+		img {
+			width: 70%;
+			margin: -10px auto 15px;
+		}
+			p {
+				color: @bodycolor;
+					span {color: @maincolor;}
+			}
+	}
+
+/* --------------------------------------------------------------
+			MAIN SIDEBAR
+-------------------------------------------------------------- */
+
+.sidebar {
+	width: 30%;
+	background: white;
+	height: auto;
+	margin-top: 40px;
+	border: 1px solid rgba(0,0,0,.12);
+	border-radius: 4px;
+	padding: 16px 30px 0px 30px !important;
+
+	& > div {
+		float: left;
+		display: inline-block;
+		padding: 20px 5px;
+		width: 100%;
+		margin-bottom: 20px;
+		border-bottom: 1px solid rgba(0,0,0,.3);
+	}
+
+	& > div:last-child {
+		border-bottom: none;
+	}
+
+		i {
+			margin-right: 5px;
+		}
+
+		input[type="text"] {
+			font-family: 'Open Sans', sans-serif;
+			border: 1px solid rgba(0,0,0,.3);
+			border-radius: 4px;
+			padding: 22px 12px;
+			display: block;
+			font-weight: 400;
+			width: 100%;
+			margin: 15px 0 -10px;
+		}
+}
+
+/* --------------------------------------------------------------
+			SOCIALS
+-------------------------------------------------------------- */
+
+.social {
+	
+
+	.fb , .twit{
+		display: block;
+		text-align: center;
+		position: relative;
+		padding: 12px 10px;
+		color: white;
+	}
+
+	.fb {
+		background: @fb-blue;
+
+		&:hover {color:white;}
+
+		i {
+			position: absolute;
+			left: 20px;
+			top: 17px;
+		}
+	}
+
+	.twit {
+		background: @tw-blue;
+		margin-top: 10px;
+
+		&:hover {color:white;}
+
+		i {
+			position: absolute;
+			left: 20px;
+			top: 17px;
+		}
+	}
+}
+
+/* --------------------------------------------------------------
+			TABELLEN
+-------------------------------------------------------------- */
+
+.tabellen {
+		margin-bottom: 10px;
+
+ iframe {
+		border: none;
+		margin-left: -8px;
+		margin-bottom: 10px;
+		
+	}
+
+	h3 {
+		padding-top: 10px;
+	}
+}
+
+/* --------------------------------------------------------------
+			GÄSTBOK
+-------------------------------------------------------------- */
+
+.gastbok {
+		margin-bottom: 10px;
+	a {
+		margin-top:12px;
+	}
+
+	input[type="text"] {
+		margin-bottom: 0;
+	}
+}
+
+/* --------------------------------------------------------------
+			A-LAGET
+-------------------------------------------------------------- */
+
+.alaget {
+	img {
+		width: 70%;
+		margin: 5px auto 15px;
+	}
+	p {
+		color: @bodycolor;
+		span {color: @maincolor;}
+	}
+}
+
+/* --------------------------------------------------------------
+			SINGLE PAGE NYHET
+-------------------------------------------------------------- */
+.room {
+	height:100px;
+	width:100%;
+	display:block;
+}
+
+.single-page-nyhet {
+	.main-content {
+		.box-12 {
+			.pufftest {
+				width: 100%;
+				margin: 0 auto;
+				padding: 25px 30px 40px 30px;
+				height: auto;
+				background: white;
+				border-radius: 4px;
+				border: 1px solid rgba(0,0,0,.12);
+				-webkit-transition: all 200ms;
+				-moz-transition: all 200ms;
+				-ms-transition: all 200ms;
+				-o-transition: all 200ms;
+				transition: all 200ms;
+
+				.nyhetsInfo {
+					display:block;
+					margin-bottom:20px;
+					border-top:1px solid rgba(0,0,0,.1);
+					border-bottom:1px solid rgba(0,0,0,.1);
+
+					img {
+						width:100%;
+						display:block;
+						margin:30px 0 !important;
+					}
+					span {
+						padding:10px 0;
+						display:inline-block;
+						width:32%;
+						text-align:center;
+						font-size:80%;
+
+						i {
+							margin-right:5px;
+						}
+					}
+
+				}
+
+				.breadcrumbs {
+					h3 {
+						text-transform:none;
+
+						span {
+							color: rgba(0,0,0,.4);
+						}
+					}
+				}
+
+				h1 {
+					padding:10px 0;
+				}
+
+				p {
+					margin:1em 0;
+
+					&:first-child {
+						margin-top:20px !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+blockquote {
+		border-left:5px solid rgba(0,0,0,.1);
+		margin:40px 0;
+		padding-left:30px;
+		padding-right:20px;
+		font-size:95%;
+}
+
+
+.showComments {
+	padding: 8px 12px;
+	display: inline-block;
+	text-align:center;
+	float:right;
+	font-size: 80%;
+	margin: 20px auto -10px;
+	background: #f1f1f1;
+	cursor: pointer;
+	border-radius: 4px;
+	border: 1px solid rgba(0,0,0,.1);
+
+	i {
+		font-size: 80%;
+		margin-left: 3px;
+	}
+}
+
+#comments-nyhet {
+	display: none;
+}
+
+#commentform {
+	margin-bottom: 30px;
+
+}
+
+#wpadminbar {
+	position: fixed !important;
+	z-index: 99999 !important;
+}
+
+.widget_search {
+	input[type=text] {
+		margin: 10px auto;
+	}
+
+	input[type=submit] {
+		width: 30%;
+	}
+}
+
+.sidebar {
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+}
+
+#er-widget-table-serie {
+	background-color: @maincolor !important;
+	width: 100% !important;
+	text-shadow:none !important;
+}
+
+#er-widget-table {
+	width: 100% !important;
+	text-shadow:none !important;
+	font-family: 'Open Sans' !important;
+	border-radius: 3px !important;
+}
+
+.er-widget-headline {
+	text-shadow:none !important;
+}
+
+/* --------------------------------------------------------------
+			NYHETSSIDA
+-------------------------------------------------------------- */
+
+
+.single-page-nyhet {
+	.main-content {
+	position:relative;
+		.box-12 {
+			.pufftest {
+				float: left;
+
+				.nyhet {
+					width: 100%;
+					display: inline-block;
+					float: left;
+
+					img {
+						margin: 1.5em 0 0 0;
+
+					}
+
+					p {
+						margin-bottom: 1em;
+						margin-top: .4em;
+					}
+					h2 {
+						margin: 1em 0 .2em 0;
+					}
+					
+					small {
+
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/* --------------------------------------------------------------
+			FOOTER
+-------------------------------------------------------------- */
+
+footer[role=contentinfo] {
+	margin-top: 60px !important;
+	width: 100%;
+	padding: 10px;
+	line-height: 1;
+	background: white;
+	color: #4C565F;
+	border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+	a {
+		float: right;
+		cursor: pointer;
+		margin: 11px 0;
+	}
+
+	footer[role=contentinfo] > div {
+		padding: 20px 0;
+	}
+
+}
+
+/* --------------------------------------------------------------
+			KONTAKTPERSONER
+-------------------------------------------------------------- */
+
+.kontakt {
+	padding: 10px 0 !important;
+}
+
+ul.kontaktpersoner {
+	padding: 0;
+
+	h2 {
+		margin-bottom: -10px;
+	}
+
+	li {
+		list-style: none;
+		width: 32%;
+		display: inline-block;
+		margin-top: 45px;
+
+		h2 {
+			font-size: 18px !important;
+			margin: 1em 0 .3em 0;
+		}
+
+		img {
+		}
+
+		p {
+			margin: 5px 0 !important;
+
+			&:first-child {
+			}
+
+			i {
+				margin-right: 3px;
+			}
+		}
+	}
+}
+
+.arbetsroll {
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+	font-size: 90%;
+	padding: 20px 0;
+}
+
+
+@media only screen and (max-width: 540px) {
+	ul.kontaktpersoner {
+		li {
+			list-style: none;
+			width: 100%;
+		}
+	}
+
+	.gform_wrapper .top_label input.medium, .gform_wrapper .top_label textarea.textarea {
+		width: 100% !important;
+	}
+
+	.form-small {
+		margin-top: -65px !important;
+		position: absolute;
+	}
+
+	.gform_body {
+		li {
+			margin-top: 20px;
+		}
+	}
+}
+
+/* --------------------------------------------------------------
+			KONTAKTPERSONER - form
+-------------------------------------------------------------- */
+
+.gform_wrapper .top_label input.medium, .gform_wrapper .top_label textarea.textarea {
+		font-family: 'Open Sans', sans-serif;
+		border: 1px solid rgba(0,0,0,.3);
+		border-radius: 4px;
+		padding: 22px 12px;
+		display: block;
+		font-weight: 400;
+		width: 100%;
+		margin: 5px 0 15px;
+		font-size: 16px;
+}
+
+.gform_wrapper .top_label textarea.textarea {
+	padding: 12px;
+}
+
+.form-small {
+	margin-top: -60px;
+	position: absolute;
+}
+
+/* --------------------------------------------------------------
+			SPONSORER
+-------------------------------------------------------------- */
+
+ul.sponsorer {
+
+	padding: 0;
+
+	li {
+		list-style: none;
+		width: 25%;
+		.box();
+
+
+		a {
+
+		img {
+			width: 100%;
+		}
+
+			margin: 0 auto;
+			width: 75%;
+
+			p {
+				margin: 10px 0;
+			}
+		}
+	}
+}
+
+ul.sponsorer-framsida {
+	padding: 0;
+	margin: 0 auto;
+	
+	li {
+		list-style: none;
+		width: 25%;
+		.box();
+	}
+}
+
+/* --------------------------------------------------------------
+			KALENDER - sida
+-------------------------------------------------------------- */
+
+ul.kalender-poster {
+
+	padding: 0;
+
+	li {
+		list-style: none;
+		margin-bottom: 2.2em;
+		display: block;
+
+		small {
+			margin-right: .6em;
+
+			i {
+				margin-right: 3px;
+			}
+		}
+	}
+}
+
+/* --------------------------------------------------------------
+			pagination
+-------------------------------------------------------------- */
+
+.pagination {
+	width: 100%;
+	text-align: center;
+	.box()
+}
+
+/* --------------------------------------------------------------
+			GÄSTBOK
+------------------------------------------------------------- */
+
+	ol.commentlist {
+		padding: 0 ;
+		li {
+			list-style: none;
+			ol.children {
+				//border-left: 4px solid #999;
+				padding: 0;
+				margin: 0 0 0 60px;
+			}
+
+			article {
+
+				p {
+					margin: .5em 0 !important;
+				}
+
+				.author {
+					font-weight: bolder;
+				}
+
+				img {
+					display: none;
+				}
+
+				.meta {
+					font-size: 80%;
+				}
+
+				padding: 20px 30px;
+				margin-bottom:20px;
+				background:#f1f1f1 !important;
+			}
+		}
+	}
+
+	.comment-reply-link {
+		padding: 6px 12px;
+		border-radius: 3px;
+		border: 1px solid #999;
+		margin-top: 10px;
+		display: inline-block;
+	}
+
+	.comment-reply-link:before {
+		margin-right: 6px;
+		content: "\f112";
+		display: inline-block;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	#respond {
+		margin-top: 80px;
+	}
+
+	#commentform {
+		input {
+			font-family: 'Open Sans', sans-serif;
+			border: 1px solid rgba(0,0,0,.3);
+			border-radius: 4px;
+			padding: 22px 12px;
+			display: block;
+			font-weight: 400;
+			width: 100%;
+			margin: 5px 0 15px;
+			font-size: 16px;
+		}
+
+		input[type="submit"] {
+			width: auto;
+			padding: 8px 12px;
+			color: #4d4d4f;
+			font-weight: 300;
+		}
+	}
+
+@media only screen and (max-width: 540px) {
+	ol.commentlist {
+		padding: 0 ;
+		li {
+			list-style: none;
+			article {
+
+				.author {
+					font-weight: bolder;
+				}
+
+				img {
+					display: none;
+				}
+
+				.meta {
+					font-size: 80%;
+				}
+
+				padding: 10px;
+				margin-bottom:20px;
+				background:#f1f1f1 !important;
+			}
+		}
+	}
+}
