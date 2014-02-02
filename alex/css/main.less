@@ -327,7 +327,7 @@
 		& > div {
 			float: left;
 			display: inline-block;
-			padding: 20px 5px;
+			padding: 20px 5px 45px 5px;
 			width: 100%;
 			margin-bottom: 20px;
 		}
@@ -490,7 +490,8 @@
 
 .gastbok {
 	border-bottom: 1px solid rgba(0,0,0,.3);
-		margin-bottom: 10px;
+	margin-bottom: 10px;
+
 	a {
 		margin-top:12px;
 	}
@@ -1002,7 +1003,7 @@ ul.kontaktpersoner {
 			SPONSORER
 -------------------------------------------------------------- */
 
-ul.sponsorer {
+ul.sponsorer, ul.spelare {
 
 	padding: 0;
 
@@ -1031,10 +1032,21 @@ ul.sponsorer {
 			width: 75%;
 
 			p {
-				margin: 10px 0;
+				margin: 5px 20px !important;
 			}
 		}
 	}
+}
+
+@media only screen and (max-width: 540px) {
+
+	ul.sponsorer, ul.spelare {
+
+		li {
+			width: 100%;
+		}
+	}
+
 }
 
 .puff-sponsor {
@@ -1089,7 +1101,7 @@ ul.sponsorer {
 
 
 		li {
-			width: 50% !important;
+			width: 100% !important;
 
 			a {
 
@@ -1148,6 +1160,7 @@ ul.kalender-poster {
 		padding: 0 ;
 		li {
 			list-style: none;
+
 			ol.children {
 				//border-left: 4px solid #999;
 				padding: 0;
@@ -1175,6 +1188,8 @@ ul.kalender-poster {
 				padding: 20px 30px;
 				margin-bottom:20px;
 				background:#f1f1f1 !important;
+				border: 1px solid rgba(0,0,0,0.12);
+				border-radius:4px;
 			}
 		}
 	}
@@ -1200,7 +1215,7 @@ ul.kalender-poster {
 	}
 
 	#respond {
-		margin-top: 20px;
+		margin-top: 40px;
 
 		.fb-social-plugin {
 			width: 100% !important;
