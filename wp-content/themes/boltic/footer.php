@@ -14,13 +14,13 @@
 	wp_nav_menu( $args );
 	?>
 
-	<a href="#" class="fb"><i class="fa fa-facebook"></i> Gilla på Facebook</a>
+	<a href="https://www.facebook.com/pages/IF-Boltic/365595540803" class="fb"><i class="fa fa-facebook"></i> Gilla på Facebook</a>
 
-	<a href="#" class="twit"><i class="fa fa-twitter"></i> Följ på Twitter</a>
+	<a href="https://twitter.com/ifboltic" class="twit"><i class="fa fa-twitter"></i> Följ på Twitter</a>
 
-	<a href="#" class="insta"><i class="fa fa-instagram"></i> Följ på Instagram</a>
+	<a href="http://instagram.com/ifboltic" class="insta"><i class="fa fa-instagram"></i> Följ på Instagram</a>
 
-	<a href="#" class="shop"><i class="fa fa-shopping-cart"></i> Besök vår webshop</a>
+	<a href="http://ifboltic.se/" class="shop"><i class="fa fa-shopping-cart"></i> Besök vår webshop</a>
 
  </div>
 
