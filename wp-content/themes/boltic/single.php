@@ -30,9 +30,11 @@ echo $category[0]->cat_name; ?></span>
 
 	<?php the_content(); ?>
 
-	<a class="fbDela"><i class="fa fa-facebook"></i> <span>Dela på Facebook<span></a>
-	<a class="twitterDela"><i class="fa fa-twitter"></i> <span>Dela på Twitter<span></a>
-	<a class="showComments" id="showComments">Visa kommentarer <i class="fa fa-chevron-right"></i></a>	
+	<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" class="fbDela"><i class="fa fa-facebook"></i> <span>Dela på Facebook<span></a>
+	<a href="https://twitter.com/share" data-lang="en" target="_blank" class="twitterDela"><i class="fa fa-twitter"></i> <span>Dela på Twitter<span></a>
+	<a class="showComments" id="showComments">Visa kommentarer <i class="fa fa-chevron-right"></i></a>
+
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 <?php endwhile; ?>
 </div>

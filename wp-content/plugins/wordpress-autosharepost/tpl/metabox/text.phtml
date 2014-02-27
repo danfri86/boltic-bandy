@@ -1,0 +1,92 @@
+<?php if ($time = strtotime($this->shared)): ?>
+    <h4><?php echo __('Post shared'); ?></h4>
+    <table class="form-table">
+        <tbody>
+            <tr>
+                <th>
+                    <label><?php echo __('Post was shared on') ?></label>
+                </th>
+                <td>
+                   	<?php echo date(get_option('date_format') . ' ' . get_option('time_format'), $time) ?>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label><?php echo __('Posting Links', WP_AUTOSHAREPOST_DOMAIN) ?></label>
+                </th>
+                <td>
+                	<?php if (!empty($this->facebookPostId)): ?>
+                    <a href="<?php echo sprintf(
+						'http://www.facebook.com/%1$s/posts/%2$s',
+                		(!empty($this->facebookPage)) ? $this->facebookPage : $this->facebookApp,
+                		$this->facebookPostId
+                	); ?>" target="_blank" title="<?php echo __('View Post on Facebook', WP_AUTOSHAREPOST_DOMAIN); ?>"><i class="wasp-icon-facebook"></i></a>
+                	<?php endif; ?>
+                	<?php if (!empty($this->twitterTweetId)): ?>
+                    <a href="<?php echo sprintf(
+						'http://www.twitter.com/%1$s/status/%2$s',
+                		$this->twitterUser,
+                		$this->twitterTweetId
+                	); ?>" target="_blank" title="<?php echo __('View Post on Twitter', WP_AUTOSHAREPOST_DOMAIN); ?>"><i class="wasp-icon-twitter"></i></a>
+                	<?php endif; ?>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label><?php echo __('Re-Share this Post', WP_AUTOSHAREPOST_DOMAIN) ?></label>
+                </th>
+                <td>
+                    <input type="checkbox" value="1" name="autosharepost[re-share]" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+    <br />
+<?php endif; ?>
+
+<h4><?php echo __('Social Network Post Messages', WP_AUTOSHAREPOST_DOMAIN); ?></h4>
+<table>
+    <tbody>
+        <tr>
+            <th>
+                <label for="wasp-enabled"><?php echo __('Enable AutoSharePost', WP_AUTOSHAREPOST_DOMAIN); ?></label>
+            </th>
+            <td>
+                <input id="wasp-enabled" type="checkbox" value="1" name="autosharepost[enabled]"<?php echo ($this->enabled == '1') ? ' checked="checked"' : '' ?> />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="wasp-facebook-text"><?php echo __('Facebook Message', WP_AUTOSHAREPOST_DOMAIN); ?></label>
+            </th>
+            <td>
+                <textarea class="regular-text code" id="wasp-facebook-text" name="autosharepost[facebook][text]" cols="80" rows="4"><?php echo $this->facebookText ?></textarea>
+            </td>
+        </tr>
+        <tr>
+        	<th>
+        		<label for="wasp-facebook-post-type"><?php echo __('Facebook Posting Type', WP_AUTOSHAREPOST_DOMAIN); ?></label>
+        	</th>
+        	<td>
+        		<select id="wasp-facebook-post-type" name="autosharepost[facebook][type]">
+                	<?php foreach (WordpressAutoSharePostAdmin::$facebookPostTypes as $type): ?>
+                    	<option value="<?php echo $type; ?>" <?php echo ($this->facebookType == $type) ? 'selected="selected"' : '' ?>><?php echo __($type, WP_AUTOSHAREPOST_DOMAIN) ?></option>
+                    <?php endforeach; ?>
+        		</select>
+        	</td>
+        </tr>
+        <tr>
+            <th>
+                <label for="wasp-twitter-text"><?php echo __('Twitter Message', WP_AUTOSHAREPOST_DOMAIN); ?></label>
+            </th>
+            <td>
+                <textarea class="regular-text code" id="wasp-twitter-text" name="autosharepost[twitter][text]" cols="80" rows="4"><?php echo $this->twitterText ?></textarea>
+                <div>
+                	<span><span id="wasp-twitter-characters-left"></span> <?php echo __('Characters left') ?></span>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<?php echo $this->nonceField; ?>

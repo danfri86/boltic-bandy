@@ -1,0 +1,16 @@
+i[class*=wasp-icon-] {
+    display: inline-block;
+    background: transparent url(../img/iconset.png) no-repeat;
+    vertical-align: middle;
+}
+
+i.wasp-icon-facebook {
+    background-position: 0 0;
+    width: 16px;
+    height: 16px;
+}
+i.wasp-icon-twitter {
+    background-position: -32px 0;
+    width: 16px;
+    height: 16px;
+}
