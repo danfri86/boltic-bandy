@@ -139,11 +139,11 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 	);
 	query_posts($args);
 	?>
-
+	
+	<div class="box-6">
+	<div class="puff nastamatch">
+    <h3>Nästa match</h3>
 	<?php if (have_posts()) : ?>
-		<div class="box-6">
-		<div class="puff nastamatch">
-        <h3>Nästa match</h3>
 	<?php while (have_posts()) : the_post();
 		// Här körs loopen för dom poster som finns
 	?>
@@ -272,13 +272,14 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 		} ?>
 
 	<?php endwhile; ?>
-		</div>
-		</div>
+		
 	<?php else:
-		// Om det inte finns några poster kan vi göra något här
+		echo '<p>Inga matcher i kalendern just nu.</p>';
 	?>
 
 	<?php endif; //Slut ?>
+	</div>
+	</div>
 	<?php wp_reset_query(); // Nollställ loopen ?>
 
     <?php // Specificera mer om dom poster vi vill ha inom ()
