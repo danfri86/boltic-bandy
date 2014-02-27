@@ -87,14 +87,13 @@ add_action('init', 'remove_header_info');
 
 
 // Ta bort Wordpress admin notifikation om uppdatering för alla användare utom admins
-global $user_login;
-get_currentuserinfo();
-
-// Om en användare har tillräckligt höga rättigheter för att uppdatera plugin (dvs. admins)
-if (!current_user_can('update_plugins')) {
-add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_version_check' );" ), 2 );
-add_filter( 'pre_option_update_core', create_function( '$a', "return null;" ) );
- }
+function hide_update_notice_to_all_but_admin_users() 
+{
+    if (!current_user_can('update_core')) {
+        remove_action( 'admin_notices', 'update_nag', 3 );
+    }
+}
+add_action( 'admin_notices', 'hide_update_notice_to_all_but_admin_users', 1 );
 
 
 

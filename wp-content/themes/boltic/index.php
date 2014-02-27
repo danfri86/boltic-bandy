@@ -295,12 +295,14 @@ query_posts("post_type=post&posts_per_page=1"); ?>
           <small><?php the_date(); ?></small>
           
 			<?php 
-			echo apply_filters('the_content', $post_meta_data['puffar_info'][0]);
+			echo substr(apply_filters('the_content', $post_meta_data['puffar_info'][0]), 0, 160). '...';
 			?>
 
 			<?php // Om det finns en länk så omsluter den hela nyheten=större klickarea
 			if( get_post_meta($post->ID, 'puffar_url', true) ) {
-				echo '<a class="btn" href="'. $post_meta_data['puffar_url'][0] .'" target="_blank">';
+				echo '<a class="btn" href="';
+				the_permalink();
+				echo '">';
 			} ?>
 				Läs mer <i class="fa fa-chevron-right"></i>
 			<?php // Här slutar länken om det finns någon
@@ -324,21 +326,22 @@ query_posts("post_type=post&posts_per_page=1"); ?>
                 <h2>Sponsra</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-                <a href="#" class="btn">Sponsra <i class="fa fa-chevron-right"></i></a>
+                <a href="<?php bloginfo('url'); ?>/sponsorer" class="btn">Sponsra <i class="fa fa-chevron-right"></i></a>
              </div>
           </div>
           <div class="box-6">
              <div class="box-4"><img class="phone-6 center" src="<?php bloginfo('template_directory'); ?>/img/member.png" alt="" width="100%"></div>
              <div class="box-8">
                 <h2>Bli medlem</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Alla hemmamatcher i vinter kostar dig bara 55 kronor/match!</p>
                 <a href="<?php bloginfo('url'); ?>/bli-medlem" class="btn">Bli medlem <i class="fa fa-chevron-right"></i></a>
              </div>
           </div>
        </div>
     </div>
 
-    <?php // Specificera mer om dom poster vi vill ha inom ()
+    <?php /*
+    // Specificera mer om dom poster vi vill ha inom ()
 	// Gör så att den aktivitet med närmast datum från idag visas först
 	$today = date('Y-m-d');
 	$args = array(
@@ -401,18 +404,8 @@ query_posts("post_type=post&posts_per_page=1"); ?>
 	?>
 
 	<?php endif; //Slut ?>
-	<?php wp_reset_query(); // Nollställ loopen ?>
-
-    <div class="box-6">
-       <div class="puff ovrigt">
-          <h3>annons</h3>
-          <h2>Volvo sponsrar</h2>
-          <small>10 november 2013</small>
-          <p>Lorem ipsum sit amet, consectetur adipiscing elit. Lorem dolor sit amet, consectetur adipiscing elit...</p>
-          <a href="" class="btn">Läs mer <i class="fa fa-chevron-right"></i></a>
-       </div>
-    </div>
-    <!--/MAIN-->
+	<?php wp_reset_query(); // Nollställ loopen 
+	*/?>
  </div>
 
  <?php get_sidebar('sidebarMain'); ?>

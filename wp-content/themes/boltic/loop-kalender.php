@@ -13,7 +13,7 @@ $args = array(
            'compare' => '>=',
            'type' => 'DATE'
        )
-   )
+	)
 	// Gör något som visar inlägg som ligger efter dagens datum. Då tas dom tidigare workshops'en bort
 );
 query_posts($args);
@@ -28,14 +28,18 @@ query_posts($args);
 
 	<li>
 		<?php // Om laget är valt i listan, skriv ut det
-+		if( get_post_meta($post->ID, 'kalender_motstandare', true) || get_post_meta($post->ID, 'kalender_alternativtlag', true) ) {
-+			echo '<h2>Boltic vs. ';
-+			echo $post_meta_data['kalender_motstandare'][0];
-+			echo $post_meta_data['kalender_alternativtlag'][0];
-+			echo '</h2>';
-+		} else {
-+			echo '<h2>'. get_the_title() .'</h2>';
-+		} ?>
+		if( get_post_meta($post->ID, 'kalender_motstandare', true) || get_post_meta($post->ID, 'kalender_alternativtlag', true) ) {
+			echo '<h2>Boltic vs. ';
+
+			if( get_post_meta($post->ID, 'kalender_motstandare', true))
+				echo $post_meta_data['kalender_motstandare'][0];
+
+			if( get_post_meta($post->ID, 'kalender_alternativtlag', true))
+				echo $post_meta_data['kalender_alternativtlag'][0];
+			echo '</h2>';
+		} else {
+			echo '<h2>'. get_the_title() .'</h2>';
+		} ?>
 			
 		<?php if( get_post_meta($post->ID, 'kalender_datum', true) ) {
 			echo '<small><i class="fa fa-calendar-o"></i> '. $post_meta_data['kalender_datum'][0] .'</small>';
