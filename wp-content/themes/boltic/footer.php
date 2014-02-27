@@ -14,7 +14,14 @@
 	wp_nav_menu( $args );
 	?>
 
-    <?php get_sidebar('sidebarMain'); ?>
+	<a href="#" class="fb"><i class="fa fa-facebook"></i> Gilla på Facebook</a>
+
+	<a href="#" class="twit"><i class="fa fa-twitter"></i> Följ på Twitter</a>
+
+	<a href="#" class="insta"><i class="fa fa-instagram"></i> Följ på Instagram</a>
+
+	<a href="#" class="shop"><i class="fa fa-shopping-cart"></i> Besök vår webshop</a>
+
  </div>
 
 <?php wp_footer(); ?>
