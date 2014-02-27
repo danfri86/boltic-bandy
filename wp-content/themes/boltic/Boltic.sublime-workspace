@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"kale",
+				"kalender_motstandare"
+			],
+			[
+				"e-post",
+				"e-postadresser"
+			],
+			[
+				"sponsor",
+				"sponsor_url"
+			],
+			[
+				"op",
+				"option"
+			],
+			[
+				"optio",
+				"options_array"
+			],
+			[
 				"mar",
 				"margin-bottom"
 			],
@@ -64,10 +84,10 @@
 	"buffers":
 	[
 		{
-			"file": "comments.php",
+			"file": "index.php",
 			"settings":
 			{
-				"buffer_size": 3941,
+				"buffer_size": 13683,
 				"line_ending": "Unix"
 			}
 		}
@@ -108,11 +128,50 @@
 	},
 	"file_history":
 	[
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page-gastbok.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/functions.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/personligtranare/wp-content/themes/pt/functions.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single-spelare.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/loop-kalender.php",
+		"/Users/daniel/Library/Caches/Cleanup At Startup/Transmit/310BFA7E-DC97-44CF-8045-B21E7D9040CA/wp-config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/meta-boxes.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single-kalender.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/functions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single-puffar.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/loop-spelare.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single-sponsorer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/css/styles.css",
+		"/Users/daniel/Downloads/boltic-bandy-master/wp-content/themes/boltic/functions.php",
+		"/Users/daniel/Downloads/boltic-bandy-master/wp-content/themes/boltic/index.php",
+		"/Users/daniel/Downloads/boltic-bandy-master/wp-content/themes/boltic/loop-kalender.php",
+		"/Users/daniel/Downloads/boltic-bandy-master/wp-content/themes/boltic/loop-sponsorer.php",
+		"/Users/daniel/Downloads/boltic-bandy-master/wp-content/plugins/widget_randomPlayer.php",
+		"/Users/daniel/Downloads/boltic-bandy-master/wp-content/themes/boltic/custom-post-type/custom-post-type.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/custom-post-type.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/loop-sponsorer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/newhem/wp-content/themes/newhem3/style.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/plugins/widget_randomPlayer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/loop-kontaktpersoner.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page-gastbok.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/sidebar.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/js/modernizr.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/fields/menu_location_select/field_menu_location_select.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/fields/pages_multi_select/field_pages_multi_select.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/fields/posts_select/field_posts_select.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/custom-post-type-columns.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/fields/color/field_color.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/comments.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/afab/wp-content/themes/afab/single-afab_fordon.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/validation/comma_numeric/validation_comma_numeric.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/validation/no_special_chars/validation_no_special_chars.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/alex/js/sidr-ck.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/validation/str_replace/validation_str_replace.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/nhp-options.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/options.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/afab/wp-content/themes/afab/footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/afab/wp-content/themes/afab/functions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/personligtranare/wp-content/themes/pt/functions.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/fonts/fontello demo/css/fontello-ie7.css",
 		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/fonts/fontello demo/LICENSE.txt",
 		"/Applications/XAMPP/xamppfiles/htdocs/ptonline/wp-content/themes/ptonline2-pt/footer.php",
@@ -192,6 +251,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"?>",
+			"<?php",
+			"movie",
+			"my_sort_movies",
+			"my_medlemmar_sortable_columns",
+			"movie",
+			"=> 'file",
+			"=> 'image",
+			"image",
+			"ändrat",
+			"devide",
+			"multi_select",
+			"multi-select",
 			"ptbyemma",
 			"dfComments",
 			"boltic_com",
@@ -268,19 +340,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "comments.php",
+					"file": "index.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3941,
+						"buffer_size": 13683,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								963,
-								977
+								12966,
+								12966
 							]
 						],
 						"settings":
@@ -288,8 +360,8 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 0.0,
-						"translation.y": 837.0,
+						"translation.x": 2.0,
+						"translation.y": 6046.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -304,7 +376,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 33.0
 	},
 	"layout":
 	{
@@ -345,20 +417,72 @@
 		"selected_items":
 		[
 			[
-				"gas",
-				"page-gastbok.php"
+				"inde",
+				"index.php"
+			],
+			[
+				"meta",
+				"custom-post-type/meta-boxes.php"
+			],
+			[
+				"page",
+				"page.php"
+			],
+			[
+				"ka",
+				"loop-kalender.php"
 			],
 			[
 				"func",
 				"functions.php"
 			],
 			[
-				"comme",
-				"comments.php"
+				"single",
+				"single-spelare.php"
 			],
 			[
-				"inde",
+				"spelare",
+				"loop-spelare.php"
+			],
+			[
+				"loop",
+				"loop-kalender.php"
+			],
+			[
+				"index",
 				"index.php"
+			],
+			[
+				"looop",
+				"loop-sponsorer.php"
+			],
+			[
+				"single-",
+				"single-spelare.php"
+			],
+			[
+				"post-",
+				"custom-post-type/custom-post-type.php"
+			],
+			[
+				"column",
+				"custom-post-type/custom-post-type-columns.php"
+			],
+			[
+				"foot",
+				"footer.php"
+			],
+			[
+				"foo",
+				"footer.php"
+			],
+			[
+				"gas",
+				"page-gastbok.php"
+			],
+			[
+				"comme",
+				"comments.php"
 			],
 			[
 				"functio",
@@ -369,16 +493,8 @@
 				"ptonline2-pt/functions.php"
 			],
 			[
-				"single",
-				"ptonline2-klient/single.php"
-			],
-			[
 				"footer",
 				"ptonline2-klient/footer.php"
-			],
-			[
-				"foo",
-				"ptonline2-pt/footer.php"
 			],
 			[
 				"tranin",
@@ -445,6 +561,14 @@
 		"selected_items":
 		[
 			[
+				"swim",
+				"/Applications/XAMPP/xamppfiles/htdocs/swimrun/wp-content/themes/SwimRun.sublime-project"
+			],
+			[
+				"new",
+				"/Applications/XAMPP/xamppfiles/htdocs/newhem/wp-content/themes/Newhem.sublime-project"
+			],
+			[
 				"linda",
 				"/Applications/XAMPP/xamppfiles/htdocs/lindanorstedt/wp-content/themes/Linda Norstedt.sublime-project"
 			],
@@ -469,7 +593,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":

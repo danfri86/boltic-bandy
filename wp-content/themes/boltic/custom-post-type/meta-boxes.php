@@ -543,7 +543,7 @@ function boltic_register_meta_boxes( $meta_boxes )
 				'id'               => "{$prefix}headerBild",
 				'type'             => 'image_advanced',
 				'max_file_uploads' => 1,
-				'desc' => 'Ladda upp den bild som ska visas högst upp. Bilden skalas till 1200*450px så länge bilden är större än så.',
+				'desc' => 'Ladda upp den bild som ska visas högst upp. Bilden visas i 1200*450px och bör vara större än så vid uppladdning.',
 			),
 			// WYSIWYG/RICH TEXT EDITOR
 			array(
