@@ -327,7 +327,7 @@ query_posts("post_type=post&posts_per_page=1"); ?>
                 <h2>Sponsra</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-                <a href="<?php bloginfo('url'); ?>/sponsorer" class="btn">Sponsra <i class="fa fa-chevron-right"></i></a>
+                <a href="<?php bloginfo('url'); ?>/kontakt" class="btn">Sponsra <i class="fa fa-chevron-right"></i></a>
              </div>
           </div>
           <div class="box-6">

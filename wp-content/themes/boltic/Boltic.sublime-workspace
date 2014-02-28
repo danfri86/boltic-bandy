@@ -84,10 +84,10 @@
 	"buffers":
 	[
 		{
-			"file": "index.php",
+			"file": "single.php",
 			"settings":
 			{
-				"buffer_size": 13683,
+				"buffer_size": 1998,
 				"line_ending": "Unix"
 			}
 		}
@@ -128,16 +128,21 @@
 	},
 	"file_history":
 	[
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page.php",
+		"/Volumes/Macintosh HD/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/css/styles.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single-kalender.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single-puffar.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single-spelare.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/functions.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/sidebar.php",
+		"/Users/daniel/Library/Caches/Cleanup At Startup/Transmit/2762F010-8DE9-4415-8C18-AE4BAFCE89C1/wp-config.php",
+		"/Users/daniel/Library/Caches/Cleanup At Startup/Transmit/D4480094-435B-499A-A8E7-A0D69D8D2404/.htaccess",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/index.php",
+		"/Users/daniel/Library/Caches/Cleanup At Startup/Transmit/81C05E77-10D2-4FD7-9A70-AC937EAE16AF/.htaccess",
+		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/loop-kalender.php",
 		"/Users/daniel/Library/Caches/Cleanup At Startup/Transmit/310BFA7E-DC97-44CF-8045-B21E7D9040CA/wp-config.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/custom-post-type/meta-boxes.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single-kalender.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/functions.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/footer.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single-puffar.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/loop-spelare.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/single-sponsorer.php",
@@ -154,7 +159,6 @@
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/plugins/widget_randomPlayer.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/loop-kontaktpersoner.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/page-gastbok.php",
-		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/sidebar.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/js/modernizr.js",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/fields/menu_location_select/field_menu_location_select.php",
 		"/Applications/XAMPP/xamppfiles/htdocs/boltic/wp-content/themes/boltic/options/fields/pages_multi_select/field_pages_multi_select.php",
@@ -251,6 +255,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"user",
 			"?>",
 			"<?php",
 			"movie",
@@ -340,19 +345,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "index.php",
+					"file": "single.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13683,
+						"buffer_size": 1998,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								12966,
-								12966
+								1441,
+								1441
 							]
 						],
 						"settings":
@@ -360,8 +365,8 @@
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": 2.0,
-						"translation.y": 6046.0,
+						"translation.x": 0.0,
+						"translation.y": 62.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -417,8 +422,20 @@
 		"selected_items":
 		[
 			[
+				"single",
+				"single.php"
+			],
+			[
+				"fo",
+				"footer.php"
+			],
+			[
 				"inde",
 				"index.php"
+			],
+			[
+				"fun",
+				"functions.php"
 			],
 			[
 				"meta",
@@ -435,10 +452,6 @@
 			[
 				"func",
 				"functions.php"
-			],
-			[
-				"single",
-				"single-spelare.php"
 			],
 			[
 				"spelare",
@@ -561,6 +574,10 @@
 		"selected_items":
 		[
 			[
+				"lets",
+				"/Applications/XAMPP/xamppfiles/htdocs/letsgo/wp-content/themes/Lets go.sublime-project"
+			],
+			[
 				"swim",
 				"/Applications/XAMPP/xamppfiles/htdocs/swimrun/wp-content/themes/SwimRun.sublime-project"
 			],
@@ -593,7 +610,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 150.0,
 	"status_bar_visible": true,
 	"template_settings":
