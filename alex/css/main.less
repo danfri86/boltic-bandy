@@ -1045,9 +1045,10 @@ ul.kontaktpersoner {
 ul.sponsorer, ul.spelare {
 
 	padding: 0;
+	list-style-type: none;
+
 
 	li {
-		list-style: none;
 		width: 25%;
 		.box();
 
@@ -1100,25 +1101,24 @@ ul.sponsorer, ul.spelare {
 		margin: 0 auto;
 		position: relative;
 		height: 100%;
+		list-style: none;
+
 
 
 		li {
-			list-style: none;
 			width: 25%;
-			display: table;
+			display: inline-block;
 			position: relative;
-			float: left;
-    		height: 100%;
 			.box();
 			padding: 0;
+			margin-left: -4px;
+			vertical-align: middle;
 
 			a {
-				display: table-cell;
-				vertical-align: middle;
+
 
 			img {
-				margin: auto;
-				padding: 20px;
+
 			}
 			p {
 				display: none;
